@@ -47,6 +47,5 @@ pub fn build_adjacency(
             }
         }
     }
-
     (edges, matrix)
 }
