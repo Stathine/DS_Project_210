@@ -38,7 +38,7 @@ impl Graph {
         self
     }
 
-    pub fn dailyexpect(&self) -> Vec<String> {
+    pub fn high_risk_pts(&self) -> Vec<String> {
         let mut positive = Vec::new();
 
         for (node, neighbors) in self.adj_map.iter() {
@@ -67,44 +67,41 @@ impl Graph {
         positive
     }
 
-    pub fn calculate_accuracy(&self, positive_patients: Vec<String>) -> f64 {
-        let mut true_positive = 0;
-        let mut false_positive = 0;
-        let mut true_negative = 0;
-        let mut false_negative = 0;
+    pub fn predict_angina(&self, patient: &String) -> Option<bool> {
+        let neighbors = self.adj_map.get(patient)?;
+        let angina_count = neighbors
+            .iter()
+            .filter(|neighbor| {
+                self.nodes
+                    .get(*neighbor)
+                    .map_or(false, |(_, _, _, _, _, _, angina)| *angina)
+            })
+            .count();
 
-        for (patient, (_, _, _, _, _, _, exang)) in &self.nodes {
-            let is_positive = positive_patients.contains(patient);
-            let actual_positive = *exang; // `exang` is a boolean field
+        let total_neighbors = neighbors.len();
 
-            if is_positive && actual_positive {
-                true_positive += 1;
-            } else if is_positive && !actual_positive {
-                false_positive += 1;
-            } else if !is_positive && !actual_positive {
-                true_negative += 1;
-            } else if !is_positive && actual_positive {
-                false_negative += 1;
-            }
+        if total_neighbors == 0 {
+            return None;
         }
 
-        let total = true_positive + false_positive + true_negative + false_negative;
+        let angina_ratio = angina_count as f64 / total_neighbors as f64;
 
-        if total == 0 {
-            return 0.0; // Handle edge case with no data
-        }
+        println!(
+            "Patient: {}, Angina Count: {}, Total Neighbors: {}, Angina Ratio: {:.2}",
+            patient, angina_count, total_neighbors, angina_ratio
+        );
 
-        (true_positive + true_negative) as f64 / total as f64
+        Some(angina_ratio >= 0.2)
     }
 
-    pub fn portfolio(&self) {
+    pub fn distances(&self) {
         for node in self.nodes.keys() {
             println!("Distance from {}", node);
-            self.risk(node);
+            self.node_distance(node);
         }
     }
 
-    pub fn risk(&self, node: &String) {
+    pub fn node_distance(&self, node: &String) {
         let mut distances: HashMap<String, Option<u32>> = self
             .nodes
             .keys()
@@ -224,7 +221,7 @@ impl Graph {
         total_coefficient / self.n as f64
     }
 
-    pub fn groups(&self) {
+    pub fn components(&self) {
         let mut visited = HashMap::new();
         let mut count = 0;
 
@@ -265,30 +262,4 @@ impl Graph {
         size
     }
 
-    pub fn predict_angina(&self, patient: &String) -> Option<bool> {
-        let neighbors = self.adj_map.get(patient)?;
-        let angina_count = neighbors
-            .iter()
-            .filter(|neighbor| {
-                self.nodes
-                    .get(*neighbor)
-                    .map_or(false, |(_, _, _, _, _, _, angina)| *angina)
-            })
-            .count();
-
-        let total_neighbors = neighbors.len();
-
-        if total_neighbors == 0 {
-            return None;
-        }
-
-        let angina_ratio = angina_count as f64 / total_neighbors as f64;
-
-        println!(
-            "Patient: {}, Angina Count: {}, Total Neighbors: {}, Angina Ratio: {:.2}",
-            patient, angina_count, total_neighbors, angina_ratio
-        );
-
-        Some(angina_ratio >= 0.2)
-    }
 }

@@ -53,10 +53,6 @@ pub fn createadj(nodes: Nodes, threshold: f64, n: usize) -> (Edges, Matrix) {
     (edges, matrix)
 }
 
-
-
-
-
 pub fn recommend(edges: Edges, nodes: &HashMap<String, (f64, f64, f64, f64, f64, f64, bool)>) -> HashMap<String, bool> {
     let mut recommendations = HashMap::new();
 

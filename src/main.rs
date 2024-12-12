@@ -55,12 +55,13 @@ fn main() {
     let mut graph = Graph::new(n, node_map, adj_map, adj_matrix);
     graph.undirected();
 
-    let mut positive = graph.dailyexpect(); // Get the list of positive patients
-    positive.sort_by_key(|id| id.trim_start_matches("Patient_").parse::<usize>().unwrap());
-    println!("Positive patients based on neighbor angina rate: {:?}", positive);
+    graph.analyze_neighborhoods();
+    graph.distances();
+    graph.components();
 
-    let accuracy = graph.calculate_accuracy(positive);
-    println!("Accuracy based on exang ground truth: {:.2}%", accuracy * 100.0);
+    let mut positive = graph.high_risk_pts(); // Get the list of positive patients
+    positive.sort_by_key(|id| id.trim_start_matches("Patient_").parse::<usize>().unwrap());
+    println!("At risk patients based on neighbor angina rate: {:?}", positive);
 
     let density = graph.edge_density();
     println!("Edge Density: {:.2}", density);
@@ -74,21 +75,10 @@ fn main() {
     let clustering = graph.clustering_coefficient();
     println!("Clustering Coefficient: {:.2}", clustering);
 
-    graph.analyze_neighborhoods();
-    graph.portfolio();
-    graph.groups();
-
-    let patients = vec![
-    3, 5, 7, 9, 10, 12, 13, 16, 17, 18, 19, 20, 22, 24, 29, 30, 33, 34, 35, 36, 37, 40, 42, 43, 46,
-    47, 49, 54, 59, 67, 68, 69, 72, 74, 78, 79, 83, 86, 87,
-    ];
-
-    for patient_number in patients {
-        let patient_id = format!("Patient_{}", patient_number); // Format each patient ID
-        match graph.predict_angina(&patient_id) {
-            Some(true) => println!("{} is likely to have exercise-induced angina.", patient_id),
-            Some(false) => println!("{} is unlikely to have exercise-induced angina.", patient_id),
-            None => println!("{} has no neighbors to make a prediction.", patient_id),
-        }
+    let patient_id = "Patient_20".to_string(); // Focus only on Patient 20
+    match graph.predict_angina(&patient_id) {
+        Some(true) => println!("{} is likely to have exercise-induced angina.", patient_id),
+        Some(false) => println!("{} is unlikely to have exercise-induced angina.", patient_id),
+        None => println!("{} has no neighbors to make a prediction.", patient_id),
     }
 }

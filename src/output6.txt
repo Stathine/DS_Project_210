@@ -1,0 +1,2717 @@
+Positive patients based on neighbor angina rate: ["Patient_1", "Patient_2", "Patient_4", "Patient_7", "Patient_10", "Patient_13", "Patient_18", "Patient_19", "Patient_20", "Patient_21", "Patient_23", "Patient_24", "Patient_25", "Patient_26", "Patient_31", "Patient_33", "Patient_34", "Patient_39", "Patient_40", "Patient_41", "Patient_46", "Patient_47", "Patient_48", "Patient_50", "Patient_53", "Patient_56", "Patient_63", "Patient_67", "Patient_68", "Patient_71", "Patient_77", "Patient_86", "Patient_92", "Patient_96", "Patient_97"]
+Accuracy based on exang ground truth: 54.00%
+Edge Density: 0.24
+Average Path Length: 1.57
+Clustering Coefficient: 0.75
+Node: Patient_30, Immediate Neighbors: ["Patient_0", "Patient_14", "Patient_26", "Patient_38", "Patient_43", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_63", "Patient_64", "Patient_65", "Patient_76", "Patient_80", "Patient_81", "Patient_89", "Patient_94", "Patient_98", "Patient_99", "Patient_59", "Patient_89", "Patient_38", "Patient_76", "Patient_99", "Patient_80", "Patient_63", "Patient_81", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_26", "Patient_98", "Patient_52", "Patient_14", "Patient_64", "Patient_65", "Patient_43"]
+Node: Patient_84, Immediate Neighbors: ["Patient_22", "Patient_37", "Patient_47", "Patient_49", "Patient_51", "Patient_61", "Patient_62", "Patient_74", "Patient_75", "Patient_79", "Patient_87", "Patient_88", "Patient_90", "Patient_93", "Patient_88", "Patient_22", "Patient_47", "Patient_87", "Patient_79", "Patient_93", "Patient_49", "Patient_37", "Patient_61", "Patient_74", "Patient_75", "Patient_90", "Patient_51", "Patient_62"]
+Node: Patient_27, Immediate Neighbors: ["Patient_3", "Patient_44", "Patient_69", "Patient_72", "Patient_91", "Patient_95", "Patient_91", "Patient_95", "Patient_3", "Patient_69", "Patient_72", "Patient_44"]
+Node: Patient_67, Immediate Neighbors: ["Patient_6", "Patient_12", "Patient_16", "Patient_32", "Patient_35", "Patient_42", "Patient_48", "Patient_85", "Patient_32", "Patient_6", "Patient_42", "Patient_85", "Patient_48", "Patient_16", "Patient_12", "Patient_35"]
+Node: Patient_86, Immediate Neighbors: ["Patient_2", "Patient_8", "Patient_11", "Patient_19", "Patient_36", "Patient_45", "Patient_68", "Patient_73", "Patient_78", "Patient_82", "Patient_82", "Patient_45", "Patient_11", "Patient_2", "Patient_73", "Patient_19", "Patient_36", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_59, Immediate Neighbors: ["Patient_0", "Patient_14", "Patient_26", "Patient_30", "Patient_38", "Patient_43", "Patient_52", "Patient_57", "Patient_60", "Patient_64", "Patient_65", "Patient_76", "Patient_80", "Patient_81", "Patient_94", "Patient_98", "Patient_99", "Patient_30", "Patient_38", "Patient_76", "Patient_99", "Patient_80", "Patient_81", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_26", "Patient_98", "Patient_52", "Patient_14", "Patient_64", "Patient_65", "Patient_43"]
+Node: Patient_88, Immediate Neighbors: ["Patient_7", "Patient_22", "Patient_37", "Patient_47", "Patient_49", "Patient_51", "Patient_61", "Patient_62", "Patient_74", "Patient_75", "Patient_79", "Patient_84", "Patient_87", "Patient_90", "Patient_93", "Patient_84", "Patient_7", "Patient_22", "Patient_47", "Patient_87", "Patient_79", "Patient_93", "Patient_49", "Patient_37", "Patient_61", "Patient_74", "Patient_75", "Patient_90", "Patient_51", "Patient_62"]
+Node: Patient_82, Immediate Neighbors: ["Patient_8", "Patient_11", "Patient_19", "Patient_45", "Patient_68", "Patient_73", "Patient_78", "Patient_86", "Patient_86", "Patient_45", "Patient_11", "Patient_73", "Patient_19", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_89, Immediate Neighbors: ["Patient_0", "Patient_26", "Patient_30", "Patient_52", "Patient_63", "Patient_94", "Patient_30", "Patient_63", "Patient_94", "Patient_0", "Patient_26", "Patient_52"]
+Node: Patient_91, Immediate Neighbors: ["Patient_27", "Patient_43", "Patient_44", "Patient_57", "Patient_60", "Patient_64", "Patient_65", "Patient_69", "Patient_72", "Patient_76", "Patient_80", "Patient_95", "Patient_98", "Patient_27", "Patient_95", "Patient_76", "Patient_80", "Patient_69", "Patient_72", "Patient_60", "Patient_57", "Patient_98", "Patient_64", "Patient_65", "Patient_44", "Patient_43"]
+Node: Patient_95, Immediate Neighbors: ["Patient_3", "Patient_27", "Patient_43", "Patient_44", "Patient_57", "Patient_60", "Patient_64", "Patient_65", "Patient_69", "Patient_72", "Patient_76", "Patient_91", "Patient_27", "Patient_91", "Patient_76", "Patient_3", "Patient_69", "Patient_72", "Patient_60", "Patient_57", "Patient_64", "Patient_65", "Patient_44", "Patient_43"]
+Node: Patient_56, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_7", "Patient_10", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_40", "Patient_47", "Patient_50", "Patient_54", "Patient_55", "Patient_70", "Patient_75", "Patient_79", "Patient_92", "Patient_97", "Patient_7", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_10", "Patient_79", "Patient_40", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_4, Immediate Neighbors: ["Patient_21", "Patient_39", "Patient_39", "Patient_21"]
+Node: Patient_32, Immediate Neighbors: ["Patient_6", "Patient_12", "Patient_16", "Patient_23", "Patient_28", "Patient_29", "Patient_35", "Patient_41", "Patient_42", "Patient_48", "Patient_67", "Patient_77", "Patient_85", "Patient_67", "Patient_77", "Patient_6", "Patient_42", "Patient_28", "Patient_41", "Patient_85", "Patient_48", "Patient_29", "Patient_16", "Patient_12", "Patient_35", "Patient_23"]
+Node: Patient_38, Immediate Neighbors: ["Patient_13", "Patient_14", "Patient_26", "Patient_30", "Patient_52", "Patient_59", "Patient_63", "Patient_81", "Patient_94", "Patient_96", "Patient_99", "Patient_30", "Patient_59", "Patient_99", "Patient_63", "Patient_13", "Patient_81", "Patient_94", "Patient_26", "Patient_96", "Patient_52", "Patient_14"]
+Node: Patient_76, Immediate Neighbors: ["Patient_0", "Patient_30", "Patient_43", "Patient_44", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_64", "Patient_65", "Patient_72", "Patient_80", "Patient_91", "Patient_94", "Patient_95", "Patient_98", "Patient_30", "Patient_59", "Patient_91", "Patient_95", "Patient_80", "Patient_72", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_98", "Patient_52", "Patient_64", "Patient_65", "Patient_44", "Patient_43"]
+Node: Patient_7, Immediate Neighbors: ["Patient_10", "Patient_24", "Patient_25", "Patient_37", "Patient_40", "Patient_47", "Patient_50", "Patient_56", "Patient_74", "Patient_75", "Patient_79", "Patient_88", "Patient_97", "Patient_88", "Patient_56", "Patient_47", "Patient_10", "Patient_79", "Patient_40", "Patient_97", "Patient_37", "Patient_24", "Patient_74", "Patient_75", "Patient_25", "Patient_50"]
+Node: Patient_22, Immediate Neighbors: ["Patient_49", "Patient_61", "Patient_62", "Patient_74", "Patient_84", "Patient_87", "Patient_88", "Patient_90", "Patient_84", "Patient_88", "Patient_87", "Patient_49", "Patient_61", "Patient_74", "Patient_90", "Patient_62"]
+Node: Patient_77, Immediate Neighbors: ["Patient_6", "Patient_12", "Patient_16", "Patient_32", "Patient_35", "Patient_42", "Patient_85", "Patient_32", "Patient_6", "Patient_42", "Patient_85", "Patient_16", "Patient_12", "Patient_35"]
+Node: Patient_6, Immediate Neighbors: ["Patient_12", "Patient_16", "Patient_23", "Patient_28", "Patient_29", "Patient_32", "Patient_35", "Patient_41", "Patient_42", "Patient_48", "Patient_67", "Patient_77", "Patient_85", "Patient_67", "Patient_32", "Patient_77", "Patient_42", "Patient_28", "Patient_41", "Patient_85", "Patient_48", "Patient_29", "Patient_16", "Patient_12", "Patient_35", "Patient_23"]
+Node: Patient_18, Immediate Neighbors: ["Patient_9", "Patient_15", "Patient_28", "Patient_29", "Patient_34", "Patient_41", "Patient_46", "Patient_58", "Patient_28", "Patient_9", "Patient_41", "Patient_29", "Patient_58", "Patient_46", "Patient_34", "Patient_15"]
+Node: Patient_3, Immediate Neighbors: ["Patient_27", "Patient_44", "Patient_69", "Patient_72", "Patient_95", "Patient_27", "Patient_95", "Patient_69", "Patient_72", "Patient_44"]
+Node: Patient_83, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_37", "Patient_47", "Patient_49", "Patient_51", "Patient_54", "Patient_55", "Patient_70", "Patient_75", "Patient_79", "Patient_87", "Patient_93", "Patient_47", "Patient_54", "Patient_55", "Patient_87", "Patient_79", "Patient_93", "Patient_49", "Patient_1", "Patient_37", "Patient_5", "Patient_70", "Patient_75", "Patient_51"]
+Node: Patient_99, Immediate Neighbors: ["Patient_14", "Patient_26", "Patient_30", "Patient_38", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_65", "Patient_81", "Patient_94", "Patient_30", "Patient_59", "Patient_38", "Patient_81", "Patient_94", "Patient_60", "Patient_57", "Patient_26", "Patient_52", "Patient_14", "Patient_65"]
+Node: Patient_42, Immediate Neighbors: ["Patient_6", "Patient_9", "Patient_12", "Patient_16", "Patient_23", "Patient_28", "Patient_29", "Patient_32", "Patient_35", "Patient_41", "Patient_48", "Patient_67", "Patient_77", "Patient_85", "Patient_67", "Patient_32", "Patient_77", "Patient_6", "Patient_28", "Patient_9", "Patient_41", "Patient_85", "Patient_48", "Patient_29", "Patient_16", "Patient_12", "Patient_35", "Patient_23"]
+Node: Patient_47, Immediate Neighbors: ["Patient_5", "Patient_7", "Patient_10", "Patient_24", "Patient_25", "Patient_37", "Patient_40", "Patient_50", "Patient_56", "Patient_74", "Patient_75", "Patient_79", "Patient_83", "Patient_84", "Patient_88", "Patient_92", "Patient_97", "Patient_84", "Patient_88", "Patient_56", "Patient_7", "Patient_83", "Patient_10", "Patient_79", "Patient_40", "Patient_97", "Patient_37", "Patient_24", "Patient_5", "Patient_74", "Patient_75", "Patient_92", "Patient_25", "Patient_50"]
+Node: Patient_28, Immediate Neighbors: ["Patient_6", "Patient_9", "Patient_12", "Patient_18", "Patient_29", "Patient_32", "Patient_34", "Patient_35", "Patient_41", "Patient_42", "Patient_46", "Patient_48", "Patient_58", "Patient_85", "Patient_32", "Patient_6", "Patient_18", "Patient_42", "Patient_9", "Patient_41", "Patient_85", "Patient_48", "Patient_29", "Patient_12", "Patient_58", "Patient_46", "Patient_34", "Patient_35"]
+Node: Patient_54, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_50", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_79", "Patient_83", "Patient_92", "Patient_97", "Patient_56", "Patient_83", "Patient_31", "Patient_55", "Patient_79", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_33, Immediate Neighbors: ["Patient_8", "Patient_36", "Patient_45", "Patient_45", "Patient_36", "Patient_8"]
+Node: Patient_45, Immediate Neighbors: ["Patient_2", "Patient_8", "Patient_11", "Patient_19", "Patient_33", "Patient_36", "Patient_68", "Patient_73", "Patient_78", "Patient_82", "Patient_86", "Patient_86", "Patient_82", "Patient_33", "Patient_11", "Patient_2", "Patient_73", "Patient_19", "Patient_36", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_31, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_20", "Patient_24", "Patient_25", "Patient_37", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_79", "Patient_92", "Patient_97", "Patient_56", "Patient_54", "Patient_55", "Patient_79", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20"]
+Node: Patient_39, Immediate Neighbors: ["Patient_4", "Patient_21", "Patient_4", "Patient_21"]
+Node: Patient_80, Immediate Neighbors: ["Patient_0", "Patient_30", "Patient_43", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_64", "Patient_65", "Patient_76", "Patient_91", "Patient_94", "Patient_98", "Patient_30", "Patient_59", "Patient_91", "Patient_76", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_98", "Patient_52", "Patient_64", "Patient_65", "Patient_43"]
+Node: Patient_55, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_50", "Patient_54", "Patient_56", "Patient_70", "Patient_75", "Patient_79", "Patient_83", "Patient_92", "Patient_97", "Patient_56", "Patient_83", "Patient_54", "Patient_31", "Patient_79", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_87, Immediate Neighbors: ["Patient_22", "Patient_37", "Patient_49", "Patient_51", "Patient_61", "Patient_62", "Patient_74", "Patient_75", "Patient_79", "Patient_83", "Patient_84", "Patient_88", "Patient_90", "Patient_93", "Patient_84", "Patient_88", "Patient_22", "Patient_83", "Patient_79", "Patient_93", "Patient_49", "Patient_37", "Patient_61", "Patient_74", "Patient_75", "Patient_90", "Patient_51", "Patient_62"]
+Node: Patient_69, Immediate Neighbors: ["Patient_3", "Patient_27", "Patient_44", "Patient_57", "Patient_60", "Patient_65", "Patient_72", "Patient_91", "Patient_95", "Patient_27", "Patient_91", "Patient_95", "Patient_3", "Patient_72", "Patient_60", "Patient_57", "Patient_65", "Patient_44"]
+Node: Patient_11, Immediate Neighbors: ["Patient_8", "Patient_45", "Patient_68", "Patient_73", "Patient_78", "Patient_82", "Patient_86", "Patient_86", "Patient_82", "Patient_45", "Patient_73", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_63, Immediate Neighbors: ["Patient_14", "Patient_26", "Patient_30", "Patient_38", "Patient_52", "Patient_81", "Patient_89", "Patient_30", "Patient_89", "Patient_38", "Patient_81", "Patient_26", "Patient_52", "Patient_14"]
+Node: Patient_10, Immediate Neighbors: ["Patient_5", "Patient_7", "Patient_24", "Patient_25", "Patient_40", "Patient_47", "Patient_50", "Patient_56", "Patient_92", "Patient_97", "Patient_56", "Patient_7", "Patient_47", "Patient_40", "Patient_97", "Patient_24", "Patient_5", "Patient_92", "Patient_25", "Patient_50"]
+Node: Patient_2, Immediate Neighbors: ["Patient_8", "Patient_19", "Patient_36", "Patient_45", "Patient_68", "Patient_73", "Patient_78", "Patient_86", "Patient_86", "Patient_45", "Patient_73", "Patient_19", "Patient_36", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_9, Immediate Neighbors: ["Patient_12", "Patient_18", "Patient_28", "Patient_29", "Patient_34", "Patient_41", "Patient_42", "Patient_46", "Patient_48", "Patient_58", "Patient_18", "Patient_42", "Patient_28", "Patient_41", "Patient_48", "Patient_29", "Patient_12", "Patient_58", "Patient_46", "Patient_34"]
+Node: Patient_72, Immediate Neighbors: ["Patient_3", "Patient_27", "Patient_43", "Patient_44", "Patient_57", "Patient_60", "Patient_64", "Patient_65", "Patient_69", "Patient_76", "Patient_91", "Patient_95", "Patient_27", "Patient_91", "Patient_95", "Patient_76", "Patient_3", "Patient_69", "Patient_60", "Patient_57", "Patient_64", "Patient_65", "Patient_44", "Patient_43"]
+Node: Patient_79, Immediate Neighbors: ["Patient_5", "Patient_7", "Patient_20", "Patient_25", "Patient_31", "Patient_37", "Patient_47", "Patient_49", "Patient_51", "Patient_54", "Patient_55", "Patient_56", "Patient_61", "Patient_70", "Patient_74", "Patient_75", "Patient_83", "Patient_84", "Patient_87", "Patient_88", "Patient_92", "Patient_97", "Patient_84", "Patient_88", "Patient_56", "Patient_7", "Patient_83", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_87", "Patient_97", "Patient_49", "Patient_37", "Patient_61", "Patient_5", "Patient_74", "Patient_70", "Patient_75", "Patient_92", "Patient_51", "Patient_25", "Patient_20"]
+Node: Patient_13, Immediate Neighbors: ["Patient_14", "Patient_38", "Patient_81", "Patient_96", "Patient_38", "Patient_81", "Patient_96", "Patient_14"]
+Node: Patient_41, Immediate Neighbors: ["Patient_6", "Patient_9", "Patient_12", "Patient_15", "Patient_16", "Patient_18", "Patient_23", "Patient_28", "Patient_29", "Patient_32", "Patient_34", "Patient_42", "Patient_46", "Patient_48", "Patient_58", "Patient_32", "Patient_6", "Patient_18", "Patient_42", "Patient_28", "Patient_9", "Patient_48", "Patient_29", "Patient_16", "Patient_12", "Patient_58", "Patient_46", "Patient_34", "Patient_15", "Patient_23"]
+Node: Patient_81, Immediate Neighbors: ["Patient_13", "Patient_14", "Patient_26", "Patient_30", "Patient_38", "Patient_52", "Patient_59", "Patient_60", "Patient_63", "Patient_65", "Patient_94", "Patient_96", "Patient_99", "Patient_30", "Patient_59", "Patient_38", "Patient_99", "Patient_63", "Patient_13", "Patient_94", "Patient_60", "Patient_26", "Patient_96", "Patient_52", "Patient_14", "Patient_65"]
+Node: Patient_85, Immediate Neighbors: ["Patient_6", "Patient_12", "Patient_16", "Patient_28", "Patient_32", "Patient_35", "Patient_42", "Patient_48", "Patient_67", "Patient_77", "Patient_67", "Patient_32", "Patient_77", "Patient_6", "Patient_42", "Patient_28", "Patient_48", "Patient_16", "Patient_12", "Patient_35"]
+Node: Patient_94, Immediate Neighbors: ["Patient_0", "Patient_14", "Patient_26", "Patient_30", "Patient_38", "Patient_43", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_64", "Patient_65", "Patient_76", "Patient_80", "Patient_81", "Patient_89", "Patient_98", "Patient_99", "Patient_30", "Patient_59", "Patient_89", "Patient_38", "Patient_76", "Patient_99", "Patient_80", "Patient_81", "Patient_60", "Patient_0", "Patient_57", "Patient_26", "Patient_98", "Patient_52", "Patient_14", "Patient_64", "Patient_65", "Patient_43"]
+Node: Patient_73, Immediate Neighbors: ["Patient_2", "Patient_8", "Patient_11", "Patient_19", "Patient_36", "Patient_45", "Patient_68", "Patient_78", "Patient_82", "Patient_86", "Patient_86", "Patient_82", "Patient_45", "Patient_11", "Patient_2", "Patient_19", "Patient_36", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_48, Immediate Neighbors: ["Patient_6", "Patient_9", "Patient_12", "Patient_16", "Patient_23", "Patient_28", "Patient_29", "Patient_32", "Patient_35", "Patient_41", "Patient_42", "Patient_46", "Patient_58", "Patient_67", "Patient_85", "Patient_67", "Patient_32", "Patient_6", "Patient_42", "Patient_28", "Patient_9", "Patient_41", "Patient_85", "Patient_29", "Patient_16", "Patient_12", "Patient_58", "Patient_46", "Patient_35", "Patient_23"]
+Node: Patient_40, Immediate Neighbors: ["Patient_7", "Patient_10", "Patient_24", "Patient_25", "Patient_47", "Patient_50", "Patient_56", "Patient_92", "Patient_97", "Patient_56", "Patient_7", "Patient_47", "Patient_10", "Patient_97", "Patient_24", "Patient_92", "Patient_25", "Patient_50"]
+Node: Patient_60, Immediate Neighbors: ["Patient_30", "Patient_43", "Patient_44", "Patient_52", "Patient_57", "Patient_59", "Patient_64", "Patient_65", "Patient_69", "Patient_72", "Patient_76", "Patient_80", "Patient_81", "Patient_91", "Patient_94", "Patient_95", "Patient_98", "Patient_99", "Patient_30", "Patient_59", "Patient_91", "Patient_95", "Patient_76", "Patient_99", "Patient_80", "Patient_69", "Patient_72", "Patient_81", "Patient_94", "Patient_57", "Patient_98", "Patient_52", "Patient_64", "Patient_65", "Patient_44", "Patient_43"]
+Node: Patient_97, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_7", "Patient_10", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_40", "Patient_47", "Patient_50", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_79", "Patient_92", "Patient_56", "Patient_7", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_10", "Patient_79", "Patient_40", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_93, Immediate Neighbors: ["Patient_49", "Patient_51", "Patient_61", "Patient_62", "Patient_74", "Patient_75", "Patient_83", "Patient_84", "Patient_87", "Patient_88", "Patient_90", "Patient_84", "Patient_88", "Patient_83", "Patient_87", "Patient_49", "Patient_61", "Patient_74", "Patient_75", "Patient_90", "Patient_51", "Patient_62"]
+Node: Patient_49, Immediate Neighbors: ["Patient_22", "Patient_37", "Patient_51", "Patient_61", "Patient_62", "Patient_74", "Patient_75", "Patient_79", "Patient_83", "Patient_84", "Patient_87", "Patient_88", "Patient_90", "Patient_93", "Patient_84", "Patient_88", "Patient_22", "Patient_83", "Patient_87", "Patient_79", "Patient_93", "Patient_37", "Patient_61", "Patient_74", "Patient_75", "Patient_90", "Patient_51", "Patient_62"]
+Node: Patient_1, Immediate Neighbors: ["Patient_5", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_83", "Patient_92", "Patient_97", "Patient_56", "Patient_83", "Patient_54", "Patient_31", "Patient_55", "Patient_97", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20"]
+Node: Patient_29, Immediate Neighbors: ["Patient_6", "Patient_9", "Patient_12", "Patient_15", "Patient_18", "Patient_23", "Patient_28", "Patient_32", "Patient_34", "Patient_41", "Patient_42", "Patient_46", "Patient_48", "Patient_58", "Patient_32", "Patient_6", "Patient_18", "Patient_42", "Patient_28", "Patient_9", "Patient_41", "Patient_48", "Patient_12", "Patient_58", "Patient_46", "Patient_34", "Patient_15", "Patient_23"]
+Node: Patient_37, Immediate Neighbors: ["Patient_5", "Patient_7", "Patient_20", "Patient_25", "Patient_31", "Patient_47", "Patient_49", "Patient_54", "Patient_55", "Patient_56", "Patient_61", "Patient_70", "Patient_74", "Patient_75", "Patient_79", "Patient_83", "Patient_84", "Patient_87", "Patient_88", "Patient_92", "Patient_97", "Patient_84", "Patient_88", "Patient_56", "Patient_7", "Patient_83", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_87", "Patient_79", "Patient_97", "Patient_49", "Patient_61", "Patient_5", "Patient_74", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20"]
+Node: Patient_0, Immediate Neighbors: ["Patient_30", "Patient_43", "Patient_52", "Patient_59", "Patient_64", "Patient_76", "Patient_80", "Patient_89", "Patient_94", "Patient_98", "Patient_30", "Patient_59", "Patient_89", "Patient_76", "Patient_80", "Patient_94", "Patient_98", "Patient_52", "Patient_64", "Patient_43"]
+Node: Patient_24, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_7", "Patient_10", "Patient_20", "Patient_25", "Patient_31", "Patient_40", "Patient_47", "Patient_50", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_92", "Patient_97", "Patient_56", "Patient_7", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_10", "Patient_40", "Patient_97", "Patient_1", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_16, Immediate Neighbors: ["Patient_6", "Patient_12", "Patient_23", "Patient_32", "Patient_35", "Patient_41", "Patient_42", "Patient_48", "Patient_67", "Patient_77", "Patient_85", "Patient_67", "Patient_32", "Patient_77", "Patient_6", "Patient_42", "Patient_41", "Patient_85", "Patient_48", "Patient_12", "Patient_35", "Patient_23"]
+Node: Patient_61, Immediate Neighbors: ["Patient_22", "Patient_37", "Patient_49", "Patient_51", "Patient_62", "Patient_74", "Patient_75", "Patient_79", "Patient_84", "Patient_87", "Patient_88", "Patient_90", "Patient_93", "Patient_84", "Patient_88", "Patient_22", "Patient_87", "Patient_79", "Patient_93", "Patient_49", "Patient_37", "Patient_74", "Patient_75", "Patient_90", "Patient_51", "Patient_62"]
+Node: Patient_5, Immediate Neighbors: ["Patient_1", "Patient_10", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_47", "Patient_50", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_79", "Patient_83", "Patient_92", "Patient_97", "Patient_56", "Patient_83", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_10", "Patient_79", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_70", "Patient_75", "Patient_92", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_19, Immediate Neighbors: ["Patient_2", "Patient_8", "Patient_36", "Patient_45", "Patient_68", "Patient_73", "Patient_78", "Patient_82", "Patient_86", "Patient_86", "Patient_82", "Patient_45", "Patient_2", "Patient_73", "Patient_36", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_57, Immediate Neighbors: ["Patient_30", "Patient_43", "Patient_44", "Patient_52", "Patient_59", "Patient_60", "Patient_64", "Patient_65", "Patient_69", "Patient_72", "Patient_76", "Patient_80", "Patient_91", "Patient_94", "Patient_95", "Patient_98", "Patient_99", "Patient_30", "Patient_59", "Patient_91", "Patient_95", "Patient_76", "Patient_99", "Patient_80", "Patient_69", "Patient_72", "Patient_94", "Patient_60", "Patient_98", "Patient_52", "Patient_64", "Patient_65", "Patient_44", "Patient_43"]
+Node: Patient_71, Immediate Neighbors: ["Patient_53", "Patient_66", "Patient_66", "Patient_53"]
+Node: Patient_74, Immediate Neighbors: ["Patient_7", "Patient_22", "Patient_37", "Patient_47", "Patient_49", "Patient_51", "Patient_61", "Patient_62", "Patient_75", "Patient_79", "Patient_84", "Patient_87", "Patient_88", "Patient_90", "Patient_93", "Patient_84", "Patient_88", "Patient_7", "Patient_22", "Patient_47", "Patient_87", "Patient_79", "Patient_93", "Patient_49", "Patient_37", "Patient_61", "Patient_75", "Patient_90", "Patient_51", "Patient_62"]
+Node: Patient_36, Immediate Neighbors: ["Patient_2", "Patient_8", "Patient_19", "Patient_33", "Patient_45", "Patient_68", "Patient_73", "Patient_78", "Patient_86", "Patient_86", "Patient_33", "Patient_45", "Patient_2", "Patient_73", "Patient_19", "Patient_8", "Patient_68", "Patient_78"]
+Node: Patient_70, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_50", "Patient_54", "Patient_55", "Patient_56", "Patient_75", "Patient_79", "Patient_83", "Patient_92", "Patient_97", "Patient_56", "Patient_83", "Patient_54", "Patient_31", "Patient_55", "Patient_79", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_75", "Patient_92", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_75, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_7", "Patient_20", "Patient_24", "Patient_31", "Patient_37", "Patient_47", "Patient_49", "Patient_51", "Patient_54", "Patient_55", "Patient_56", "Patient_61", "Patient_70", "Patient_74", "Patient_79", "Patient_83", "Patient_84", "Patient_87", "Patient_88", "Patient_92", "Patient_93", "Patient_97", "Patient_84", "Patient_88", "Patient_56", "Patient_7", "Patient_83", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_87", "Patient_79", "Patient_97", "Patient_93", "Patient_49", "Patient_1", "Patient_37", "Patient_24", "Patient_61", "Patient_5", "Patient_74", "Patient_70", "Patient_92", "Patient_51", "Patient_20"]
+Node: Patient_26, Immediate Neighbors: ["Patient_14", "Patient_30", "Patient_38", "Patient_52", "Patient_59", "Patient_63", "Patient_81", "Patient_89", "Patient_94", "Patient_99", "Patient_30", "Patient_59", "Patient_89", "Patient_38", "Patient_99", "Patient_63", "Patient_81", "Patient_94", "Patient_52", "Patient_14"]
+Node: Patient_90, Immediate Neighbors: ["Patient_22", "Patient_49", "Patient_51", "Patient_61", "Patient_62", "Patient_74", "Patient_84", "Patient_87", "Patient_88", "Patient_93", "Patient_84", "Patient_88", "Patient_22", "Patient_87", "Patient_93", "Patient_49", "Patient_61", "Patient_74", "Patient_51", "Patient_62"]
+Node: Patient_92, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_10", "Patient_20", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_40", "Patient_47", "Patient_50", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_79", "Patient_97", "Patient_56", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_10", "Patient_79", "Patient_40", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_25", "Patient_20", "Patient_50"]
+Node: Patient_96, Immediate Neighbors: ["Patient_13", "Patient_14", "Patient_38", "Patient_81", "Patient_38", "Patient_13", "Patient_81", "Patient_14"]
+Node: Patient_8, Immediate Neighbors: ["Patient_2", "Patient_11", "Patient_19", "Patient_33", "Patient_36", "Patient_45", "Patient_68", "Patient_73", "Patient_78", "Patient_82", "Patient_86", "Patient_86", "Patient_82", "Patient_33", "Patient_45", "Patient_11", "Patient_2", "Patient_73", "Patient_19", "Patient_36", "Patient_68", "Patient_78"]
+Node: Patient_12, Immediate Neighbors: ["Patient_6", "Patient_9", "Patient_16", "Patient_23", "Patient_28", "Patient_29", "Patient_32", "Patient_35", "Patient_41", "Patient_42", "Patient_46", "Patient_48", "Patient_58", "Patient_67", "Patient_77", "Patient_85", "Patient_67", "Patient_32", "Patient_77", "Patient_6", "Patient_42", "Patient_28", "Patient_9", "Patient_41", "Patient_85", "Patient_48", "Patient_29", "Patient_16", "Patient_58", "Patient_46", "Patient_35", "Patient_23"]
+Node: Patient_51, Immediate Neighbors: ["Patient_49", "Patient_61", "Patient_62", "Patient_74", "Patient_75", "Patient_79", "Patient_83", "Patient_84", "Patient_87", "Patient_88", "Patient_90", "Patient_93", "Patient_84", "Patient_88", "Patient_83", "Patient_87", "Patient_79", "Patient_93", "Patient_49", "Patient_61", "Patient_74", "Patient_75", "Patient_90", "Patient_62"]
+Node: Patient_98, Immediate Neighbors: ["Patient_0", "Patient_30", "Patient_43", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_64", "Patient_65", "Patient_76", "Patient_80", "Patient_91", "Patient_94", "Patient_30", "Patient_59", "Patient_91", "Patient_76", "Patient_80", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_52", "Patient_64", "Patient_65", "Patient_43"]
+Node: Patient_52, Immediate Neighbors: ["Patient_0", "Patient_14", "Patient_26", "Patient_30", "Patient_38", "Patient_43", "Patient_57", "Patient_59", "Patient_60", "Patient_63", "Patient_64", "Patient_65", "Patient_76", "Patient_80", "Patient_81", "Patient_89", "Patient_94", "Patient_98", "Patient_99", "Patient_30", "Patient_59", "Patient_89", "Patient_38", "Patient_76", "Patient_99", "Patient_80", "Patient_63", "Patient_81", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_26", "Patient_98", "Patient_14", "Patient_64", "Patient_65", "Patient_43"]
+Node: Patient_14, Immediate Neighbors: ["Patient_13", "Patient_26", "Patient_30", "Patient_38", "Patient_52", "Patient_59", "Patient_63", "Patient_81", "Patient_94", "Patient_96", "Patient_99", "Patient_30", "Patient_59", "Patient_38", "Patient_99", "Patient_63", "Patient_13", "Patient_81", "Patient_94", "Patient_26", "Patient_96", "Patient_52"]
+Node: Patient_25, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_7", "Patient_10", "Patient_20", "Patient_24", "Patient_31", "Patient_37", "Patient_40", "Patient_47", "Patient_50", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_79", "Patient_92", "Patient_97", "Patient_56", "Patient_7", "Patient_47", "Patient_54", "Patient_31", "Patient_55", "Patient_10", "Patient_79", "Patient_40", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_92", "Patient_20", "Patient_50"]
+Node: Patient_64, Immediate Neighbors: ["Patient_0", "Patient_30", "Patient_43", "Patient_44", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_65", "Patient_72", "Patient_76", "Patient_80", "Patient_91", "Patient_94", "Patient_95", "Patient_98", "Patient_30", "Patient_59", "Patient_91", "Patient_95", "Patient_76", "Patient_80", "Patient_72", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_98", "Patient_52", "Patient_65", "Patient_44", "Patient_43"]
+Node: Patient_65, Immediate Neighbors: ["Patient_30", "Patient_43", "Patient_44", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_64", "Patient_69", "Patient_72", "Patient_76", "Patient_80", "Patient_81", "Patient_91", "Patient_94", "Patient_95", "Patient_98", "Patient_99", "Patient_30", "Patient_59", "Patient_91", "Patient_95", "Patient_76", "Patient_99", "Patient_80", "Patient_69", "Patient_72", "Patient_81", "Patient_94", "Patient_60", "Patient_57", "Patient_98", "Patient_52", "Patient_64", "Patient_44", "Patient_43"]
+Node: Patient_58, Immediate Neighbors: ["Patient_9", "Patient_12", "Patient_15", "Patient_18", "Patient_23", "Patient_28", "Patient_29", "Patient_34", "Patient_41", "Patient_46", "Patient_48", "Patient_18", "Patient_28", "Patient_9", "Patient_41", "Patient_48", "Patient_29", "Patient_12", "Patient_46", "Patient_34", "Patient_15", "Patient_23"]
+Node: Patient_68, Immediate Neighbors: ["Patient_2", "Patient_8", "Patient_11", "Patient_19", "Patient_36", "Patient_45", "Patient_73", "Patient_78", "Patient_82", "Patient_86", "Patient_86", "Patient_82", "Patient_45", "Patient_11", "Patient_2", "Patient_73", "Patient_19", "Patient_36", "Patient_8", "Patient_78"]
+Node: Patient_46, Immediate Neighbors: ["Patient_9", "Patient_12", "Patient_15", "Patient_18", "Patient_23", "Patient_28", "Patient_29", "Patient_34", "Patient_41", "Patient_48", "Patient_58", "Patient_18", "Patient_28", "Patient_9", "Patient_41", "Patient_48", "Patient_29", "Patient_12", "Patient_58", "Patient_34", "Patient_15", "Patient_23"]
+Node: Patient_34, Immediate Neighbors: ["Patient_9", "Patient_15", "Patient_18", "Patient_28", "Patient_29", "Patient_41", "Patient_46", "Patient_58", "Patient_18", "Patient_28", "Patient_9", "Patient_41", "Patient_29", "Patient_58", "Patient_46", "Patient_15"]
+Node: Patient_66, Immediate Neighbors: ["Patient_53", "Patient_71", "Patient_71", "Patient_53"]
+Node: Patient_35, Immediate Neighbors: ["Patient_6", "Patient_12", "Patient_16", "Patient_28", "Patient_32", "Patient_42", "Patient_48", "Patient_67", "Patient_77", "Patient_85", "Patient_67", "Patient_32", "Patient_77", "Patient_6", "Patient_42", "Patient_28", "Patient_85", "Patient_48", "Patient_16", "Patient_12"]
+Node: Patient_44, Immediate Neighbors: ["Patient_3", "Patient_27", "Patient_43", "Patient_57", "Patient_60", "Patient_64", "Patient_65", "Patient_69", "Patient_72", "Patient_76", "Patient_91", "Patient_95", "Patient_27", "Patient_91", "Patient_95", "Patient_76", "Patient_3", "Patient_69", "Patient_72", "Patient_60", "Patient_57", "Patient_64", "Patient_65", "Patient_43"]
+Node: Patient_21, Immediate Neighbors: ["Patient_4", "Patient_39", "Patient_4", "Patient_39"]
+Node: Patient_20, Immediate Neighbors: ["Patient_1", "Patient_5", "Patient_24", "Patient_25", "Patient_31", "Patient_37", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_75", "Patient_79", "Patient_92", "Patient_97", "Patient_56", "Patient_54", "Patient_31", "Patient_55", "Patient_79", "Patient_97", "Patient_1", "Patient_37", "Patient_24", "Patient_5", "Patient_70", "Patient_75", "Patient_92", "Patient_25"]
+Node: Patient_43, Immediate Neighbors: ["Patient_0", "Patient_30", "Patient_44", "Patient_52", "Patient_57", "Patient_59", "Patient_60", "Patient_64", "Patient_65", "Patient_72", "Patient_76", "Patient_80", "Patient_91", "Patient_94", "Patient_95", "Patient_98", "Patient_30", "Patient_59", "Patient_91", "Patient_95", "Patient_76", "Patient_80", "Patient_72", "Patient_94", "Patient_60", "Patient_0", "Patient_57", "Patient_98", "Patient_52", "Patient_64", "Patient_65", "Patient_44"]
+Node: Patient_62, Immediate Neighbors: ["Patient_22", "Patient_49", "Patient_51", "Patient_61", "Patient_74", "Patient_84", "Patient_87", "Patient_88", "Patient_90", "Patient_93", "Patient_84", "Patient_88", "Patient_22", "Patient_87", "Patient_93", "Patient_49", "Patient_61", "Patient_74", "Patient_90", "Patient_51"]
+Node: Patient_78, Immediate Neighbors: ["Patient_2", "Patient_8", "Patient_11", "Patient_19", "Patient_36", "Patient_45", "Patient_68", "Patient_73", "Patient_82", "Patient_86", "Patient_86", "Patient_82", "Patient_45", "Patient_11", "Patient_2", "Patient_73", "Patient_19", "Patient_36", "Patient_8", "Patient_68"]
+Node: Patient_53, Immediate Neighbors: ["Patient_66", "Patient_71", "Patient_71", "Patient_66"]
+Node: Patient_50, Immediate Neighbors: ["Patient_5", "Patient_7", "Patient_10", "Patient_24", "Patient_25", "Patient_40", "Patient_47", "Patient_54", "Patient_55", "Patient_56", "Patient_70", "Patient_92", "Patient_97", "Patient_56", "Patient_7", "Patient_47", "Patient_54", "Patient_55", "Patient_10", "Patient_40", "Patient_97", "Patient_24", "Patient_5", "Patient_70", "Patient_92", "Patient_25"]
+Node: Patient_15, Immediate Neighbors: ["Patient_18", "Patient_23", "Patient_29", "Patient_34", "Patient_41", "Patient_46", "Patient_58", "Patient_18", "Patient_41", "Patient_29", "Patient_58", "Patient_46", "Patient_34", "Patient_23"]
+Node: Patient_23, Immediate Neighbors: ["Patient_6", "Patient_12", "Patient_15", "Patient_16", "Patient_29", "Patient_32", "Patient_41", "Patient_42", "Patient_46", "Patient_48", "Patient_58", "Patient_32", "Patient_6", "Patient_42", "Patient_41", "Patient_48", "Patient_29", "Patient_16", "Patient_12", "Patient_58", "Patient_46", "Patient_15"]
+Distance from Patient_59
+Patient_52: 1
+Patient_96: 2
+Patient_95: 2
+Patient_38: 1
+Patient_94: 1
+Patient_30: 1
+Patient_89: 2
+Patient_0: 1
+Patient_14: 1
+Patient_76: 1
+Patient_80: 1
+Patient_44: 2
+Patient_3: 3
+Patient_65: 1
+Patient_91: 2
+Patient_59: 0
+Patient_69: 2
+Patient_27: 3
+Patient_99: 1
+Patient_64: 1
+Patient_98: 1
+Patient_57: 1
+Patient_81: 1
+Patient_60: 1
+Patient_63: 2
+Patient_26: 1
+Patient_13: 2
+Patient_43: 1
+Patient_72: 2
+Distance from Patient_60
+Patient_26: 2
+Patient_81: 1
+Patient_64: 1
+Patient_80: 1
+Patient_60: 0
+Patient_89: 2
+Patient_69: 1
+Patient_52: 1
+Patient_63: 2
+Patient_99: 1
+Patient_30: 1
+Patient_65: 1
+Patient_43: 1
+Patient_98: 1
+Patient_95: 1
+Patient_76: 1
+Patient_94: 1
+Patient_38: 2
+Patient_91: 1
+Patient_14: 2
+Patient_3: 2
+Patient_96: 2
+Patient_0: 2
+Patient_57: 1
+Patient_59: 1
+Patient_13: 2
+Patient_72: 1
+Patient_44: 1
+Patient_27: 2
+Distance from Patient_39
+Patient_21: 1
+Patient_39: 0
+Patient_4: 1
+Distance from Patient_8
+Patient_11: 1
+Patient_2: 1
+Patient_36: 1
+Patient_45: 1
+Patient_82: 1
+Patient_73: 1
+Patient_8: 0
+Patient_19: 1
+Patient_86: 1
+Patient_78: 1
+Patient_33: 1
+Patient_68: 1
+Distance from Patient_57
+Patient_59: 1
+Patient_13: 3
+Patient_38: 2
+Patient_63: 2
+Patient_43: 1
+Patient_60: 1
+Patient_80: 1
+Patient_72: 1
+Patient_96: 3
+Patient_69: 1
+Patient_89: 2
+Patient_27: 2
+Patient_81: 2
+Patient_64: 1
+Patient_44: 1
+Patient_26: 2
+Patient_91: 1
+Patient_95: 1
+Patient_98: 1
+Patient_57: 0
+Patient_3: 2
+Patient_99: 1
+Patient_30: 1
+Patient_0: 2
+Patient_76: 1
+Patient_94: 1
+Patient_65: 1
+Patient_52: 1
+Patient_14: 2
+Distance from Patient_3
+Patient_0: 3
+Patient_60: 2
+Patient_91: 2
+Patient_13: 4
+Patient_64: 2
+Patient_98: 3
+Patient_80: 3
+Patient_30: 3
+Patient_89: 4
+Patient_96: 4
+Patient_43: 2
+Patient_59: 3
+Patient_94: 3
+Patient_72: 1
+Patient_99: 3
+Patient_3: 0
+Patient_27: 1
+Patient_95: 1
+Patient_14: 4
+Patient_26: 4
+Patient_57: 2
+Patient_81: 3
+Patient_63: 4
+Patient_38: 4
+Patient_44: 1
+Patient_52: 3
+Patient_76: 2
+Patient_69: 1
+Patient_65: 2
+Distance from Patient_76
+Patient_99: 2
+Patient_94: 1
+Patient_95: 1
+Patient_27: 2
+Patient_63: 2
+Patient_59: 1
+Patient_13: 3
+Patient_96: 3
+Patient_91: 1
+Patient_44: 1
+Patient_0: 1
+Patient_57: 1
+Patient_65: 1
+Patient_69: 2
+Patient_72: 1
+Patient_98: 1
+Patient_80: 1
+Patient_14: 2
+Patient_3: 2
+Patient_30: 1
+Patient_76: 0
+Patient_52: 1
+Patient_38: 2
+Patient_43: 1
+Patient_81: 2
+Patient_64: 1
+Patient_60: 1
+Patient_89: 2
+Patient_26: 2
+Distance from Patient_17
+Patient_17: 0
+Distance from Patient_14
+Patient_81: 1
+Patient_52: 1
+Patient_95: 3
+Patient_0: 2
+Patient_94: 1
+Patient_99: 1
+Patient_72: 3
+Patient_98: 2
+Patient_80: 2
+Patient_59: 1
+Patient_91: 3
+Patient_38: 1
+Patient_13: 1
+Patient_26: 1
+Patient_43: 2
+Patient_65: 2
+Patient_60: 2
+Patient_44: 3
+Patient_14: 0
+Patient_3: 4
+Patient_69: 3
+Patient_27: 4
+Patient_96: 1
+Patient_30: 1
+Patient_64: 2
+Patient_63: 1
+Patient_89: 2
+Patient_57: 2
+Patient_76: 2
+Distance from Patient_1
+Patient_61: 2
+Patient_31: 1
+Patient_40: 2
+Patient_50: 2
+Patient_5: 1
+Patient_24: 1
+Patient_55: 1
+Patient_75: 1
+Patient_1: 0
+Patient_20: 1
+Patient_97: 1
+Patient_87: 2
+Patient_83: 1
+Patient_90: 3
+Patient_7: 2
+Patient_56: 1
+Patient_88: 2
+Patient_92: 1
+Patient_22: 3
+Patient_49: 2
+Patient_70: 1
+Patient_10: 2
+Patient_93: 2
+Patient_84: 2
+Patient_54: 1
+Patient_62: 3
+Patient_47: 2
+Patient_37: 2
+Patient_74: 2
+Patient_79: 2
+Patient_51: 2
+Patient_25: 1
+Distance from Patient_20
+Patient_62: 3
+Patient_74: 2
+Patient_50: 2
+Patient_84: 2
+Patient_24: 1
+Patient_61: 2
+Patient_88: 2
+Patient_20: 0
+Patient_90: 3
+Patient_75: 1
+Patient_97: 1
+Patient_70: 1
+Patient_51: 2
+Patient_54: 1
+Patient_22: 3
+Patient_10: 2
+Patient_7: 2
+Patient_87: 2
+Patient_93: 2
+Patient_49: 2
+Patient_31: 1
+Patient_1: 1
+Patient_92: 1
+Patient_47: 2
+Patient_83: 2
+Patient_37: 1
+Patient_79: 1
+Patient_40: 2
+Patient_55: 1
+Patient_56: 1
+Patient_25: 1
+Patient_5: 1
+Distance from Patient_81
+Patient_63: 1
+Patient_60: 1
+Patient_91: 2
+Patient_3: 3
+Patient_81: 0
+Patient_98: 2
+Patient_44: 2
+Patient_52: 1
+Patient_72: 2
+Patient_59: 1
+Patient_94: 1
+Patient_14: 1
+Patient_13: 1
+Patient_99: 1
+Patient_38: 1
+Patient_76: 2
+Patient_64: 2
+Patient_0: 2
+Patient_95: 2
+Patient_89: 2
+Patient_96: 1
+Patient_65: 1
+Patient_69: 2
+Patient_30: 1
+Patient_80: 2
+Patient_27: 3
+Patient_43: 2
+Patient_57: 2
+Patient_26: 1
+Distance from Patient_53
+Patient_66: 1
+Patient_53: 0
+Patient_71: 1
+Distance from Patient_68
+Patient_11: 1
+Patient_73: 1
+Patient_2: 1
+Patient_45: 1
+Patient_78: 1
+Patient_86: 1
+Patient_36: 1
+Patient_19: 1
+Patient_68: 0
+Patient_8: 1
+Patient_33: 2
+Patient_82: 1
+Distance from Patient_92
+Patient_24: 1
+Patient_25: 1
+Patient_84: 2
+Patient_51: 2
+Patient_56: 1
+Patient_54: 1
+Patient_7: 2
+Patient_92: 0
+Patient_22: 3
+Patient_74: 2
+Patient_31: 1
+Patient_37: 1
+Patient_88: 2
+Patient_87: 2
+Patient_97: 1
+Patient_61: 2
+Patient_50: 1
+Patient_5: 1
+Patient_90: 3
+Patient_1: 1
+Patient_75: 1
+Patient_49: 2
+Patient_47: 1
+Patient_79: 1
+Patient_40: 1
+Patient_83: 2
+Patient_70: 1
+Patient_10: 1
+Patient_62: 3
+Patient_93: 2
+Patient_20: 1
+Patient_55: 1
+Distance from Patient_19
+Patient_45: 1
+Patient_2: 1
+Patient_68: 1
+Patient_82: 1
+Patient_73: 1
+Patient_36: 1
+Patient_11: 2
+Patient_33: 2
+Patient_8: 1
+Patient_19: 0
+Patient_78: 1
+Patient_86: 1
+Distance from Patient_0
+Patient_0: 0
+Patient_64: 1
+Patient_3: 3
+Patient_81: 2
+Patient_38: 2
+Patient_52: 1
+Patient_69: 3
+Patient_43: 1
+Patient_94: 1
+Patient_27: 3
+Patient_98: 1
+Patient_30: 1
+Patient_59: 1
+Patient_89: 1
+Patient_65: 2
+Patient_76: 1
+Patient_80: 1
+Patient_63: 2
+Patient_91: 2
+Patient_96: 3
+Patient_60: 2
+Patient_95: 2
+Patient_99: 2
+Patient_26: 2
+Patient_44: 2
+Patient_72: 2
+Patient_14: 2
+Patient_13: 3
+Patient_57: 2
+Distance from Patient_30
+Patient_57: 1
+Patient_80: 1
+Patient_64: 1
+Patient_65: 1
+Patient_3: 3
+Patient_91: 2
+Patient_13: 2
+Patient_96: 2
+Patient_14: 1
+Patient_63: 1
+Patient_27: 3
+Patient_0: 1
+Patient_60: 1
+Patient_52: 1
+Patient_38: 1
+Patient_30: 0
+Patient_59: 1
+Patient_43: 1
+Patient_95: 2
+Patient_72: 2
+Patient_81: 1
+Patient_26: 1
+Patient_44: 2
+Patient_69: 2
+Patient_89: 1
+Patient_76: 1
+Patient_98: 1
+Patient_99: 1
+Patient_94: 1
+Distance from Patient_66
+Patient_66: 0
+Patient_71: 1
+Patient_53: 1
+Distance from Patient_70
+Patient_20: 1
+Patient_50: 1
+Patient_22: 3
+Patient_47: 2
+Patient_79: 1
+Patient_31: 1
+Patient_90: 3
+Patient_5: 1
+Patient_92: 1
+Patient_56: 1
+Patient_7: 2
+Patient_61: 2
+Patient_10: 2
+Patient_62: 3
+Patient_83: 1
+Patient_87: 2
+Patient_97: 1
+Patient_40: 2
+Patient_75: 1
+Patient_37: 1
+Patient_54: 1
+Patient_24: 1
+Patient_49: 2
+Patient_74: 2
+Patient_84: 2
+Patient_70: 0
+Patient_1: 1
+Patient_25: 1
+Patient_51: 2
+Patient_88: 2
+Patient_55: 1
+Patient_93: 2
+Distance from Patient_9
+Patient_29: 1
+Patient_18: 1
+Patient_77: 2
+Patient_42: 1
+Patient_35: 2
+Patient_41: 1
+Patient_16: 2
+Patient_58: 1
+Patient_48: 1
+Patient_67: 2
+Patient_6: 2
+Patient_85: 2
+Patient_34: 1
+Patient_15: 2
+Patient_28: 1
+Patient_46: 1
+Patient_23: 2
+Patient_12: 1
+Patient_9: 0
+Patient_32: 2
+Distance from Patient_73
+Patient_82: 1
+Patient_86: 1
+Patient_11: 1
+Patient_45: 1
+Patient_73: 0
+Patient_33: 2
+Patient_68: 1
+Patient_36: 1
+Patient_19: 1
+Patient_8: 1
+Patient_78: 1
+Patient_2: 1
+Distance from Patient_78
+Patient_82: 1
+Patient_78: 0
+Patient_2: 1
+Patient_19: 1
+Patient_45: 1
+Patient_86: 1
+Patient_33: 2
+Patient_36: 1
+Patient_68: 1
+Patient_73: 1
+Patient_11: 1
+Patient_8: 1
+Distance from Patient_18
+Patient_58: 1
+Patient_48: 2
+Patient_77: 3
+Patient_15: 1
+Patient_12: 2
+Patient_28: 1
+Patient_35: 2
+Patient_85: 2
+Patient_9: 1
+Patient_6: 2
+Patient_34: 1
+Patient_23: 2
+Patient_41: 1
+Patient_16: 2
+Patient_32: 2
+Patient_18: 0
+Patient_42: 2
+Patient_67: 3
+Patient_46: 1
+Patient_29: 1
+Distance from Patient_28
+Patient_18: 1
+Patient_28: 0
+Patient_32: 1
+Patient_15: 2
+Patient_6: 1
+Patient_48: 1
+Patient_35: 1
+Patient_67: 2
+Patient_23: 2
+Patient_58: 1
+Patient_42: 1
+Patient_29: 1
+Patient_41: 1
+Patient_77: 2
+Patient_85: 1
+Patient_34: 1
+Patient_16: 2
+Patient_12: 1
+Patient_46: 1
+Patient_9: 1
+Distance from Patient_77
+Patient_48: 2
+Patient_23: 2
+Patient_35: 1
+Patient_32: 1
+Patient_6: 1
+Patient_46: 2
+Patient_77: 0
+Patient_15: 3
+Patient_85: 1
+Patient_28: 2
+Patient_16: 1
+Patient_41: 2
+Patient_9: 2
+Patient_42: 1
+Patient_34: 3
+Patient_12: 1
+Patient_18: 3
+Patient_67: 2
+Patient_58: 2
+Patient_29: 2
+Distance from Patient_52
+Patient_64: 1
+Patient_99: 1
+Patient_76: 1
+Patient_0: 1
+Patient_13: 2
+Patient_38: 1
+Patient_52: 0
+Patient_27: 3
+Patient_94: 1
+Patient_3: 3
+Patient_80: 1
+Patient_69: 2
+Patient_26: 1
+Patient_72: 2
+Patient_95: 2
+Patient_81: 1
+Patient_14: 1
+Patient_57: 1
+Patient_60: 1
+Patient_91: 2
+Patient_43: 1
+Patient_63: 1
+Patient_44: 2
+Patient_65: 1
+Patient_98: 1
+Patient_59: 1
+Patient_30: 1
+Patient_89: 1
+Patient_96: 2
+Distance from Patient_75
+Patient_55: 1
+Patient_92: 1
+Patient_1: 1
+Patient_84: 1
+Patient_74: 1
+Patient_54: 1
+Patient_37: 1
+Patient_50: 2
+Patient_79: 1
+Patient_22: 2
+Patient_62: 2
+Patient_97: 1
+Patient_75: 0
+Patient_93: 1
+Patient_90: 2
+Patient_10: 2
+Patient_24: 1
+Patient_47: 1
+Patient_88: 1
+Patient_83: 1
+Patient_51: 1
+Patient_20: 1
+Patient_5: 1
+Patient_49: 1
+Patient_87: 1
+Patient_7: 1
+Patient_25: 2
+Patient_70: 1
+Patient_40: 2
+Patient_31: 1
+Patient_56: 1
+Patient_61: 1
+Distance from Patient_48
+Patient_46: 1
+Patient_77: 2
+Patient_12: 1
+Patient_18: 2
+Patient_35: 1
+Patient_67: 1
+Patient_23: 1
+Patient_16: 1
+Patient_48: 0
+Patient_41: 1
+Patient_29: 1
+Patient_6: 1
+Patient_9: 1
+Patient_28: 1
+Patient_15: 2
+Patient_32: 1
+Patient_85: 1
+Patient_58: 1
+Patient_34: 2
+Patient_42: 1
+Distance from Patient_10
+Patient_92: 1
+Patient_1: 2
+Patient_22: 3
+Patient_93: 3
+Patient_37: 2
+Patient_20: 2
+Patient_61: 3
+Patient_24: 1
+Patient_97: 1
+Patient_74: 2
+Patient_51: 3
+Patient_75: 2
+Patient_70: 2
+Patient_79: 2
+Patient_62: 3
+Patient_47: 1
+Patient_90: 3
+Patient_87: 3
+Patient_55: 2
+Patient_88: 2
+Patient_7: 1
+Patient_25: 1
+Patient_49: 3
+Patient_10: 0
+Patient_83: 2
+Patient_84: 2
+Patient_54: 2
+Patient_50: 1
+Patient_5: 1
+Patient_40: 1
+Patient_56: 1
+Patient_31: 2
+Distance from Patient_69
+Patient_30: 2
+Patient_0: 3
+Patient_43: 2
+Patient_63: 3
+Patient_76: 2
+Patient_65: 1
+Patient_38: 3
+Patient_94: 2
+Patient_80: 2
+Patient_99: 2
+Patient_64: 2
+Patient_89: 3
+Patient_26: 3
+Patient_72: 1
+Patient_14: 3
+Patient_81: 2
+Patient_13: 3
+Patient_96: 3
+Patient_3: 1
+Patient_91: 1
+Patient_44: 1
+Patient_95: 1
+Patient_69: 0
+Patient_52: 2
+Patient_98: 2
+Patient_27: 1
+Patient_60: 1
+Patient_57: 1
+Patient_59: 2
+Distance from Patient_79
+Patient_92: 1
+Patient_1: 2
+Patient_56: 1
+Patient_70: 1
+Patient_79: 0
+Patient_24: 2
+Patient_97: 1
+Patient_87: 1
+Patient_83: 1
+Patient_22: 2
+Patient_50: 2
+Patient_54: 1
+Patient_47: 1
+Patient_74: 1
+Patient_55: 1
+Patient_84: 1
+Patient_7: 1
+Patient_31: 1
+Patient_49: 1
+Patient_75: 1
+Patient_10: 2
+Patient_37: 1
+Patient_51: 1
+Patient_40: 2
+Patient_25: 1
+Patient_20: 1
+Patient_88: 1
+Patient_61: 1
+Patient_5: 1
+Patient_90: 2
+Patient_62: 2
+Patient_93: 2
+Distance from Patient_16
+Patient_15: 2
+Patient_35: 1
+Patient_67: 1
+Patient_46: 2
+Patient_23: 1
+Patient_42: 1
+Patient_41: 1
+Patient_48: 1
+Patient_28: 2
+Patient_85: 1
+Patient_58: 2
+Patient_32: 1
+Patient_9: 2
+Patient_12: 1
+Patient_77: 1
+Patient_18: 2
+Patient_16: 0
+Patient_6: 1
+Patient_34: 2
+Patient_29: 2
+Distance from Patient_7
+Patient_70: 2
+Patient_90: 2
+Patient_84: 2
+Patient_55: 2
+Patient_24: 1
+Patient_56: 1
+Patient_88: 1
+Patient_62: 2
+Patient_97: 1
+Patient_61: 2
+Patient_5: 2
+Patient_51: 2
+Patient_49: 2
+Patient_50: 1
+Patient_31: 2
+Patient_87: 2
+Patient_40: 1
+Patient_47: 1
+Patient_22: 2
+Patient_10: 1
+Patient_93: 2
+Patient_92: 2
+Patient_37: 1
+Patient_7: 0
+Patient_25: 1
+Patient_83: 2
+Patient_79: 1
+Patient_54: 2
+Patient_1: 2
+Patient_20: 2
+Patient_74: 1
+Patient_75: 1
+Distance from Patient_33
+Patient_82: 2
+Patient_45: 1
+Patient_2: 2
+Patient_68: 2
+Patient_19: 2
+Patient_33: 0
+Patient_11: 2
+Patient_36: 1
+Patient_86: 2
+Patient_73: 2
+Patient_8: 1
+Patient_78: 2
+Distance from Patient_36
+Patient_33: 1
+Patient_19: 1
+Patient_2: 1
+Patient_86: 1
+Patient_11: 2
+Patient_82: 2
+Patient_45: 1
+Patient_68: 1
+Patient_36: 0
+Patient_78: 1
+Patient_8: 1
+Patient_73: 1
+Distance from Patient_4
+Patient_4: 0
+Patient_39: 1
+Patient_21: 1
+Distance from Patient_54
+Patient_90: 3
+Patient_56: 1
+Patient_10: 2
+Patient_62: 3
+Patient_87: 2
+Patient_88: 2
+Patient_1: 1
+Patient_50: 1
+Patient_31: 1
+Patient_22: 3
+Patient_51: 2
+Patient_70: 1
+Patient_24: 1
+Patient_37: 1
+Patient_83: 1
+Patient_25: 1
+Patient_84: 2
+Patient_49: 2
+Patient_54: 0
+Patient_61: 2
+Patient_74: 2
+Patient_7: 2
+Patient_75: 1
+Patient_55: 1
+Patient_40: 2
+Patient_5: 1
+Patient_97: 1
+Patient_79: 1
+Patient_20: 1
+Patient_93: 2
+Patient_92: 1
+Patient_47: 2
+Distance from Patient_35
+Patient_28: 1
+Patient_48: 1
+Patient_15: 3
+Patient_18: 2
+Patient_32: 1
+Patient_16: 1
+Patient_6: 1
+Patient_12: 1
+Patient_67: 1
+Patient_41: 2
+Patient_34: 2
+Patient_85: 1
+Patient_23: 2
+Patient_77: 1
+Patient_29: 2
+Patient_9: 2
+Patient_58: 2
+Patient_42: 1
+Patient_35: 0
+Patient_46: 2
+Distance from Patient_13
+Patient_14: 1
+Patient_26: 2
+Patient_57: 3
+Patient_63: 2
+Patient_72: 3
+Patient_94: 2
+Patient_52: 2
+Patient_91: 3
+Patient_59: 2
+Patient_95: 3
+Patient_89: 3
+Patient_0: 3
+Patient_99: 2
+Patient_27: 4
+Patient_69: 3
+Patient_80: 3
+Patient_43: 3
+Patient_65: 2
+Patient_13: 0
+Patient_96: 1
+Patient_81: 1
+Patient_38: 1
+Patient_98: 3
+Patient_44: 3
+Patient_60: 2
+Patient_64: 3
+Patient_30: 2
+Patient_3: 4
+Patient_76: 3
+Distance from Patient_22
+Patient_5: 3
+Patient_47: 2
+Patient_22: 0
+Patient_84: 1
+Patient_79: 2
+Patient_90: 1
+Patient_62: 1
+Patient_54: 3
+Patient_49: 1
+Patient_7: 2
+Patient_93: 2
+Patient_55: 3
+Patient_51: 2
+Patient_31: 3
+Patient_70: 3
+Patient_75: 2
+Patient_88: 1
+Patient_87: 1
+Patient_50: 3
+Patient_37: 2
+Patient_1: 3
+Patient_24: 3
+Patient_97: 3
+Patient_20: 3
+Patient_74: 1
+Patient_92: 3
+Patient_40: 3
+Patient_25: 3
+Patient_10: 3
+Patient_56: 3
+Patient_83: 2
+Patient_61: 1
+Distance from Patient_40
+Patient_10: 1
+Patient_50: 1
+Patient_7: 1
+Patient_83: 2
+Patient_62: 3
+Patient_5: 2
+Patient_75: 2
+Patient_51: 3
+Patient_56: 1
+Patient_20: 2
+Patient_92: 1
+Patient_84: 2
+Patient_61: 3
+Patient_24: 1
+Patient_74: 2
+Patient_93: 3
+Patient_70: 2
+Patient_88: 2
+Patient_87: 3
+Patient_1: 2
+Patient_54: 2
+Patient_97: 1
+Patient_49: 3
+Patient_25: 1
+Patient_31: 2
+Patient_22: 3
+Patient_55: 2
+Patient_79: 2
+Patient_90: 3
+Patient_40: 0
+Patient_47: 1
+Patient_37: 2
+Distance from Patient_43
+Patient_95: 1
+Patient_43: 0
+Patient_3: 2
+Patient_96: 3
+Patient_94: 1
+Patient_65: 1
+Patient_26: 2
+Patient_57: 1
+Patient_89: 2
+Patient_27: 2
+Patient_44: 1
+Patient_60: 1
+Patient_98: 1
+Patient_76: 1
+Patient_91: 1
+Patient_52: 1
+Patient_81: 2
+Patient_59: 1
+Patient_14: 2
+Patient_72: 1
+Patient_99: 2
+Patient_69: 2
+Patient_64: 1
+Patient_13: 3
+Patient_30: 1
+Patient_0: 1
+Patient_80: 1
+Patient_38: 2
+Patient_63: 2
+Distance from Patient_63
+Patient_60: 2
+Patient_44: 3
+Patient_63: 0
+Patient_27: 4
+Patient_76: 2
+Patient_80: 2
+Patient_94: 2
+Patient_13: 2
+Patient_69: 3
+Patient_91: 3
+Patient_0: 2
+Patient_95: 3
+Patient_65: 2
+Patient_98: 2
+Patient_59: 2
+Patient_72: 3
+Patient_3: 4
+Patient_89: 1
+Patient_96: 2
+Patient_57: 2
+Patient_52: 1
+Patient_99: 2
+Patient_81: 1
+Patient_30: 1
+Patient_64: 2
+Patient_26: 1
+Patient_43: 2
+Patient_14: 1
+Patient_38: 1
+Distance from Patient_64
+Patient_80: 1
+Patient_43: 1
+Patient_59: 1
+Patient_14: 2
+Patient_69: 2
+Patient_76: 1
+Patient_38: 2
+Patient_94: 1
+Patient_91: 1
+Patient_99: 2
+Patient_98: 1
+Patient_72: 1
+Patient_89: 2
+Patient_27: 2
+Patient_65: 1
+Patient_96: 3
+Patient_81: 2
+Patient_64: 0
+Patient_44: 1
+Patient_63: 2
+Patient_95: 1
+Patient_57: 1
+Patient_52: 1
+Patient_13: 3
+Patient_60: 1
+Patient_3: 2
+Patient_0: 1
+Patient_26: 2
+Patient_30: 1
+Distance from Patient_67
+Patient_28: 2
+Patient_34: 3
+Patient_35: 1
+Patient_46: 2
+Patient_23: 2
+Patient_6: 1
+Patient_77: 2
+Patient_42: 1
+Patient_9: 2
+Patient_15: 3
+Patient_48: 1
+Patient_67: 0
+Patient_16: 1
+Patient_32: 1
+Patient_58: 2
+Patient_29: 2
+Patient_85: 1
+Patient_12: 1
+Patient_18: 3
+Patient_41: 2
+Distance from Patient_71
+Patient_53: 1
+Patient_71: 0
+Patient_66: 1
+Distance from Patient_72
+Patient_14: 3
+Patient_96: 3
+Patient_80: 2
+Patient_99: 2
+Patient_59: 2
+Patient_76: 1
+Patient_60: 1
+Patient_94: 2
+Patient_57: 1
+Patient_3: 1
+Patient_91: 1
+Patient_89: 3
+Patient_26: 3
+Patient_95: 1
+Patient_30: 2
+Patient_98: 2
+Patient_43: 1
+Patient_52: 2
+Patient_63: 3
+Patient_72: 0
+Patient_69: 1
+Patient_65: 1
+Patient_64: 1
+Patient_81: 2
+Patient_38: 3
+Patient_0: 2
+Patient_44: 1
+Patient_13: 3
+Patient_27: 1
+Distance from Patient_82
+Patient_45: 1
+Patient_33: 2
+Patient_73: 1
+Patient_86: 1
+Patient_68: 1
+Patient_19: 1
+Patient_82: 0
+Patient_11: 1
+Patient_8: 1
+Patient_36: 2
+Patient_2: 2
+Patient_78: 1
+Distance from Patient_46
+Patient_15: 1
+Patient_34: 1
+Patient_77: 2
+Patient_6: 2
+Patient_9: 1
+Patient_18: 1
+Patient_35: 2
+Patient_29: 1
+Patient_12: 1
+Patient_16: 2
+Patient_28: 1
+Patient_32: 2
+Patient_41: 1
+Patient_85: 2
+Patient_48: 1
+Patient_67: 2
+Patient_46: 0
+Patient_23: 1
+Patient_58: 1
+Patient_42: 2
+Distance from Patient_90
+Patient_93: 1
+Patient_31: 3
+Patient_88: 1
+Patient_70: 3
+Patient_83: 2
+Patient_49: 1
+Patient_1: 3
+Patient_97: 3
+Patient_56: 3
+Patient_47: 2
+Patient_87: 1
+Patient_62: 1
+Patient_40: 3
+Patient_84: 1
+Patient_37: 2
+Patient_79: 2
+Patient_51: 1
+Patient_92: 3
+Patient_10: 3
+Patient_75: 2
+Patient_20: 3
+Patient_25: 3
+Patient_22: 1
+Patient_55: 3
+Patient_61: 1
+Patient_74: 1
+Patient_7: 2
+Patient_50: 3
+Patient_24: 3
+Patient_5: 3
+Patient_54: 3
+Patient_90: 0
+Distance from Patient_91
+Patient_13: 3
+Patient_94: 2
+Patient_91: 0
+Patient_76: 1
+Patient_44: 1
+Patient_60: 1
+Patient_64: 1
+Patient_30: 2
+Patient_63: 3
+Patient_69: 1
+Patient_96: 3
+Patient_72: 1
+Patient_81: 2
+Patient_98: 1
+Patient_26: 3
+Patient_65: 1
+Patient_80: 1
+Patient_3: 2
+Patient_14: 3
+Patient_43: 1
+Patient_57: 1
+Patient_99: 2
+Patient_89: 3
+Patient_95: 1
+Patient_0: 2
+Patient_38: 3
+Patient_59: 2
+Patient_27: 1
+Patient_52: 2
+Distance from Patient_32
+Patient_67: 1
+Patient_23: 1
+Patient_35: 1
+Patient_9: 2
+Patient_34: 2
+Patient_48: 1
+Patient_42: 1
+Patient_85: 1
+Patient_12: 1
+Patient_77: 1
+Patient_16: 1
+Patient_18: 2
+Patient_28: 1
+Patient_46: 2
+Patient_58: 2
+Patient_41: 1
+Patient_29: 1
+Patient_32: 0
+Patient_6: 1
+Patient_15: 2
+Distance from Patient_98
+Patient_96: 3
+Patient_60: 1
+Patient_14: 2
+Patient_0: 1
+Patient_63: 2
+Patient_3: 3
+Patient_59: 1
+Patient_69: 2
+Patient_13: 3
+Patient_38: 2
+Patient_89: 2
+Patient_94: 1
+Patient_27: 2
+Patient_43: 1
+Patient_57: 1
+Patient_52: 1
+Patient_65: 1
+Patient_80: 1
+Patient_72: 2
+Patient_91: 1
+Patient_76: 1
+Patient_26: 2
+Patient_30: 1
+Patient_99: 2
+Patient_81: 2
+Patient_98: 0
+Patient_95: 2
+Patient_64: 1
+Patient_44: 2
+Distance from Patient_38
+Patient_91: 3
+Patient_95: 3
+Patient_26: 1
+Patient_57: 2
+Patient_64: 2
+Patient_44: 3
+Patient_94: 1
+Patient_96: 1
+Patient_76: 2
+Patient_13: 1
+Patient_89: 2
+Patient_27: 4
+Patient_38: 0
+Patient_0: 2
+Patient_99: 1
+Patient_59: 1
+Patient_98: 2
+Patient_3: 4
+Patient_63: 1
+Patient_69: 3
+Patient_80: 2
+Patient_72: 3
+Patient_81: 1
+Patient_52: 1
+Patient_14: 1
+Patient_30: 1
+Patient_60: 2
+Patient_43: 2
+Patient_65: 2
+Distance from Patient_80
+Patient_30: 1
+Patient_69: 2
+Patient_13: 3
+Patient_60: 1
+Patient_44: 2
+Patient_72: 2
+Patient_59: 1
+Patient_76: 1
+Patient_63: 2
+Patient_43: 1
+Patient_81: 2
+Patient_52: 1
+Patient_64: 1
+Patient_57: 1
+Patient_98: 1
+Patient_95: 2
+Patient_65: 1
+Patient_14: 2
+Patient_3: 3
+Patient_38: 2
+Patient_0: 1
+Patient_27: 2
+Patient_94: 1
+Patient_89: 2
+Patient_91: 1
+Patient_80: 0
+Patient_99: 2
+Patient_26: 2
+Patient_96: 3
+Distance from Patient_23
+Patient_85: 2
+Patient_18: 2
+Patient_42: 1
+Patient_16: 1
+Patient_29: 1
+Patient_58: 1
+Patient_6: 1
+Patient_67: 2
+Patient_34: 2
+Patient_48: 1
+Patient_32: 1
+Patient_35: 2
+Patient_46: 1
+Patient_15: 1
+Patient_28: 2
+Patient_41: 1
+Patient_12: 1
+Patient_23: 0
+Patient_9: 2
+Patient_77: 2
+Distance from Patient_99
+Patient_95: 2
+Patient_43: 2
+Patient_81: 1
+Patient_57: 1
+Patient_52: 1
+Patient_13: 2
+Patient_64: 2
+Patient_14: 1
+Patient_27: 3
+Patient_59: 1
+Patient_72: 2
+Patient_65: 1
+Patient_89: 2
+Patient_3: 3
+Patient_76: 2
+Patient_94: 1
+Patient_44: 2
+Patient_98: 2
+Patient_38: 1
+Patient_30: 1
+Patient_91: 2
+Patient_99: 0
+Patient_0: 2
+Patient_69: 2
+Patient_26: 1
+Patient_63: 2
+Patient_96: 2
+Patient_60: 1
+Patient_80: 2
+Distance from Patient_58
+Patient_32: 2
+Patient_48: 1
+Patient_41: 1
+Patient_15: 1
+Patient_12: 1
+Patient_67: 2
+Patient_35: 2
+Patient_46: 1
+Patient_34: 1
+Patient_85: 2
+Patient_77: 2
+Patient_6: 2
+Patient_42: 2
+Patient_29: 1
+Patient_28: 1
+Patient_18: 1
+Patient_58: 0
+Patient_9: 1
+Patient_23: 1
+Patient_16: 2
+Distance from Patient_62
+Patient_51: 1
+Patient_22: 1
+Patient_37: 2
+Patient_88: 1
+Patient_55: 3
+Patient_20: 3
+Patient_49: 1
+Patient_70: 3
+Patient_90: 1
+Patient_79: 2
+Patient_1: 3
+Patient_84: 1
+Patient_87: 1
+Patient_97: 3
+Patient_31: 3
+Patient_83: 2
+Patient_50: 3
+Patient_74: 1
+Patient_75: 2
+Patient_10: 3
+Patient_24: 3
+Patient_93: 1
+Patient_61: 1
+Patient_7: 2
+Patient_54: 3
+Patient_40: 3
+Patient_62: 0
+Patient_56: 3
+Patient_92: 3
+Patient_25: 3
+Patient_5: 3
+Patient_47: 2
+Distance from Patient_97
+Patient_83: 2
+Patient_10: 1
+Patient_92: 1
+Patient_54: 1
+Patient_51: 2
+Patient_90: 3
+Patient_49: 2
+Patient_1: 1
+Patient_93: 2
+Patient_70: 1
+Patient_56: 1
+Patient_88: 2
+Patient_50: 1
+Patient_87: 2
+Patient_40: 1
+Patient_20: 1
+Patient_37: 1
+Patient_79: 1
+Patient_22: 3
+Patient_61: 2
+Patient_55: 1
+Patient_47: 1
+Patient_25: 1
+Patient_24: 1
+Patient_31: 1
+Patient_62: 3
+Patient_5: 1
+Patient_84: 2
+Patient_75: 1
+Patient_97: 0
+Patient_74: 2
+Patient_7: 1
+Distance from Patient_93
+Patient_83: 1
+Patient_20: 2
+Patient_87: 1
+Patient_92: 2
+Patient_75: 1
+Patient_79: 2
+Patient_7: 2
+Patient_54: 2
+Patient_90: 1
+Patient_56: 2
+Patient_84: 1
+Patient_88: 1
+Patient_50: 3
+Patient_93: 0
+Patient_10: 3
+Patient_51: 1
+Patient_24: 2
+Patient_97: 2
+Patient_40: 3
+Patient_55: 2
+Patient_31: 2
+Patient_62: 1
+Patient_74: 1
+Patient_49: 1
+Patient_47: 2
+Patient_37: 2
+Patient_25: 3
+Patient_61: 1
+Patient_70: 2
+Patient_5: 2
+Patient_22: 2
+Patient_1: 2
+Distance from Patient_56
+Patient_75: 1
+Patient_22: 3
+Patient_93: 2
+Patient_37: 1
+Patient_74: 2
+Patient_56: 0
+Patient_5: 1
+Patient_40: 1
+Patient_79: 1
+Patient_47: 1
+Patient_61: 2
+Patient_24: 1
+Patient_25: 1
+Patient_55: 1
+Patient_87: 2
+Patient_10: 1
+Patient_92: 1
+Patient_90: 3
+Patient_70: 1
+Patient_62: 3
+Patient_97: 1
+Patient_51: 2
+Patient_84: 2
+Patient_1: 1
+Patient_50: 1
+Patient_88: 2
+Patient_20: 1
+Patient_54: 1
+Patient_83: 2
+Patient_31: 1
+Patient_49: 2
+Patient_7: 1
+Distance from Patient_15
+Patient_34: 1
+Patient_16: 2
+Patient_58: 1
+Patient_9: 2
+Patient_18: 1
+Patient_41: 1
+Patient_29: 1
+Patient_28: 2
+Patient_48: 2
+Patient_15: 0
+Patient_46: 1
+Patient_6: 2
+Patient_35: 3
+Patient_42: 2
+Patient_77: 3
+Patient_32: 2
+Patient_85: 3
+Patient_67: 3
+Patient_12: 2
+Patient_23: 1
+Distance from Patient_83
+Patient_37: 1
+Patient_93: 1
+Patient_79: 1
+Patient_62: 2
+Patient_49: 1
+Patient_70: 1
+Patient_24: 2
+Patient_54: 1
+Patient_22: 2
+Patient_88: 2
+Patient_92: 2
+Patient_10: 2
+Patient_20: 2
+Patient_1: 1
+Patient_90: 2
+Patient_84: 2
+Patient_47: 1
+Patient_74: 2
+Patient_25: 2
+Patient_83: 0
+Patient_56: 2
+Patient_55: 1
+Patient_97: 2
+Patient_5: 1
+Patient_51: 1
+Patient_61: 2
+Patient_31: 2
+Patient_75: 1
+Patient_50: 2
+Patient_7: 2
+Patient_40: 2
+Patient_87: 1
+Distance from Patient_84
+Patient_88: 1
+Patient_51: 1
+Patient_55: 2
+Patient_25: 2
+Patient_20: 2
+Patient_56: 2
+Patient_40: 2
+Patient_74: 1
+Patient_87: 1
+Patient_37: 1
+Patient_1: 2
+Patient_62: 1
+Patient_92: 2
+Patient_70: 2
+Patient_7: 2
+Patient_84: 0
+Patient_5: 2
+Patient_24: 2
+Patient_83: 2
+Patient_31: 2
+Patient_10: 2
+Patient_97: 2
+Patient_22: 1
+Patient_93: 1
+Patient_61: 1
+Patient_47: 1
+Patient_79: 1
+Patient_90: 1
+Patient_54: 2
+Patient_50: 2
+Patient_75: 1
+Patient_49: 1
+Distance from Patient_42
+Patient_28: 1
+Patient_85: 1
+Patient_9: 1
+Patient_15: 2
+Patient_6: 1
+Patient_48: 1
+Patient_16: 1
+Patient_23: 1
+Patient_41: 1
+Patient_35: 1
+Patient_77: 1
+Patient_12: 1
+Patient_18: 2
+Patient_29: 1
+Patient_32: 1
+Patient_46: 2
+Patient_67: 1
+Patient_34: 2
+Patient_58: 2
+Patient_42: 0
+Distance from Patient_2
+Patient_68: 1
+Patient_11: 2
+Patient_2: 0
+Patient_78: 1
+Patient_19: 1
+Patient_86: 1
+Patient_82: 2
+Patient_36: 1
+Patient_8: 1
+Patient_73: 1
+Patient_33: 2
+Patient_45: 1
+Distance from Patient_25
+Patient_22: 3
+Patient_5: 1
+Patient_62: 3
+Patient_7: 1
+Patient_56: 1
+Patient_50: 1
+Patient_84: 2
+Patient_92: 1
+Patient_70: 1
+Patient_54: 1
+Patient_55: 1
+Patient_40: 1
+Patient_25: 0
+Patient_20: 1
+Patient_24: 1
+Patient_87: 2
+Patient_10: 1
+Patient_97: 1
+Patient_75: 2
+Patient_31: 1
+Patient_88: 2
+Patient_83: 2
+Patient_1: 1
+Patient_61: 2
+Patient_51: 2
+Patient_47: 1
+Patient_90: 3
+Patient_93: 3
+Patient_49: 2
+Patient_74: 2
+Patient_79: 1
+Patient_37: 1
+Distance from Patient_51
+Patient_54: 2
+Patient_20: 2
+Patient_61: 1
+Patient_79: 1
+Patient_37: 2
+Patient_87: 1
+Patient_55: 2
+Patient_25: 2
+Patient_97: 2
+Patient_90: 1
+Patient_10: 3
+Patient_62: 1
+Patient_84: 1
+Patient_47: 2
+Patient_49: 1
+Patient_70: 2
+Patient_31: 2
+Patient_75: 1
+Patient_83: 1
+Patient_56: 2
+Patient_92: 2
+Patient_22: 2
+Patient_51: 0
+Patient_40: 3
+Patient_93: 1
+Patient_50: 3
+Patient_74: 1
+Patient_88: 1
+Patient_24: 2
+Patient_5: 2
+Patient_1: 2
+Patient_7: 2
+Distance from Patient_41
+Patient_77: 2
+Patient_67: 2
+Patient_48: 1
+Patient_42: 1
+Patient_46: 1
+Patient_29: 1
+Patient_58: 1
+Patient_9: 1
+Patient_12: 1
+Patient_16: 1
+Patient_35: 2
+Patient_85: 2
+Patient_28: 1
+Patient_18: 1
+Patient_41: 0
+Patient_32: 1
+Patient_6: 1
+Patient_34: 1
+Patient_23: 1
+Patient_15: 1
+Distance from Patient_94
+Patient_96: 2
+Patient_52: 1
+Patient_98: 1
+Patient_60: 1
+Patient_26: 1
+Patient_80: 1
+Patient_69: 2
+Patient_57: 1
+Patient_27: 3
+Patient_94: 0
+Patient_72: 2
+Patient_95: 2
+Patient_64: 1
+Patient_44: 2
+Patient_76: 1
+Patient_91: 2
+Patient_89: 1
+Patient_59: 1
+Patient_81: 1
+Patient_0: 1
+Patient_3: 3
+Patient_30: 1
+Patient_43: 1
+Patient_63: 2
+Patient_14: 1
+Patient_38: 1
+Patient_99: 1
+Patient_65: 1
+Patient_13: 2
+Distance from Patient_50
+Patient_7: 1
+Patient_25: 1
+Patient_5: 1
+Patient_51: 3
+Patient_50: 0
+Patient_70: 1
+Patient_10: 1
+Patient_79: 2
+Patient_49: 3
+Patient_61: 3
+Patient_47: 1
+Patient_87: 3
+Patient_22: 3
+Patient_40: 1
+Patient_62: 3
+Patient_90: 3
+Patient_84: 2
+Patient_24: 1
+Patient_88: 2
+Patient_1: 2
+Patient_55: 1
+Patient_37: 2
+Patient_54: 1
+Patient_97: 1
+Patient_83: 2
+Patient_20: 2
+Patient_93: 3
+Patient_74: 2
+Patient_31: 2
+Patient_92: 1
+Patient_75: 2
+Patient_56: 1
+Distance from Patient_55
+Patient_75: 1
+Patient_47: 2
+Patient_83: 1
+Patient_55: 0
+Patient_5: 1
+Patient_49: 2
+Patient_31: 1
+Patient_10: 2
+Patient_87: 2
+Patient_61: 2
+Patient_79: 1
+Patient_54: 1
+Patient_93: 2
+Patient_51: 2
+Patient_37: 1
+Patient_92: 1
+Patient_84: 2
+Patient_88: 2
+Patient_70: 1
+Patient_24: 1
+Patient_25: 1
+Patient_1: 1
+Patient_90: 3
+Patient_22: 3
+Patient_74: 2
+Patient_97: 1
+Patient_40: 2
+Patient_62: 3
+Patient_56: 1
+Patient_7: 2
+Patient_20: 1
+Patient_50: 1
+Distance from Patient_6
+Patient_12: 1
+Patient_77: 1
+Patient_35: 1
+Patient_58: 2
+Patient_46: 2
+Patient_42: 1
+Patient_29: 1
+Patient_85: 1
+Patient_15: 2
+Patient_18: 2
+Patient_67: 1
+Patient_28: 1
+Patient_9: 2
+Patient_32: 1
+Patient_34: 2
+Patient_41: 1
+Patient_6: 0
+Patient_23: 1
+Patient_16: 1
+Patient_48: 1
+Distance from Patient_86
+Patient_19: 1
+Patient_2: 1
+Patient_78: 1
+Patient_33: 2
+Patient_86: 0
+Patient_68: 1
+Patient_45: 1
+Patient_73: 1
+Patient_8: 1
+Patient_36: 1
+Patient_11: 1
+Patient_82: 1
+Distance from Patient_11
+Patient_73: 1
+Patient_8: 1
+Patient_68: 1
+Patient_45: 1
+Patient_19: 2
+Patient_33: 2
+Patient_36: 2
+Patient_2: 2
+Patient_82: 1
+Patient_11: 0
+Patient_78: 1
+Patient_86: 1
+Distance from Patient_47
+Patient_20: 2
+Patient_62: 2
+Patient_84: 1
+Patient_50: 1
+Patient_47: 0
+Patient_37: 1
+Patient_7: 1
+Patient_79: 1
+Patient_5: 1
+Patient_31: 2
+Patient_74: 1
+Patient_40: 1
+Patient_1: 2
+Patient_61: 2
+Patient_24: 1
+Patient_55: 2
+Patient_87: 2
+Patient_97: 1
+Patient_56: 1
+Patient_92: 1
+Patient_70: 2
+Patient_54: 2
+Patient_90: 2
+Patient_22: 2
+Patient_83: 1
+Patient_51: 2
+Patient_10: 1
+Patient_49: 2
+Patient_93: 2
+Patient_25: 1
+Patient_75: 1
+Patient_88: 1
+Distance from Patient_89
+Patient_0: 1
+Patient_60: 2
+Patient_38: 2
+Patient_27: 4
+Patient_59: 2
+Patient_44: 3
+Patient_96: 3
+Patient_63: 1
+Patient_30: 1
+Patient_81: 2
+Patient_57: 2
+Patient_3: 4
+Patient_72: 3
+Patient_52: 1
+Patient_99: 2
+Patient_43: 2
+Patient_26: 1
+Patient_98: 2
+Patient_65: 2
+Patient_13: 3
+Patient_89: 0
+Patient_91: 3
+Patient_95: 3
+Patient_76: 2
+Patient_80: 2
+Patient_94: 1
+Patient_14: 2
+Patient_69: 3
+Patient_64: 2
+Distance from Patient_26
+Patient_3: 4
+Patient_14: 1
+Patient_59: 1
+Patient_52: 1
+Patient_60: 2
+Patient_27: 4
+Patient_96: 2
+Patient_81: 1
+Patient_38: 1
+Patient_30: 1
+Patient_13: 2
+Patient_98: 2
+Patient_63: 1
+Patient_94: 1
+Patient_89: 1
+Patient_65: 2
+Patient_76: 2
+Patient_0: 2
+Patient_69: 3
+Patient_72: 3
+Patient_80: 2
+Patient_91: 3
+Patient_99: 1
+Patient_95: 3
+Patient_43: 2
+Patient_57: 2
+Patient_64: 2
+Patient_44: 3
+Patient_26: 0
+Distance from Patient_27
+Patient_94: 3
+Patient_89: 4
+Patient_13: 4
+Patient_59: 3
+Patient_96: 4
+Patient_64: 2
+Patient_81: 3
+Patient_30: 3
+Patient_80: 2
+Patient_27: 0
+Patient_3: 1
+Patient_44: 1
+Patient_72: 1
+Patient_26: 4
+Patient_52: 3
+Patient_43: 2
+Patient_14: 4
+Patient_91: 1
+Patient_99: 3
+Patient_38: 4
+Patient_76: 2
+Patient_60: 2
+Patient_65: 2
+Patient_63: 4
+Patient_57: 2
+Patient_69: 1
+Patient_98: 2
+Patient_0: 3
+Patient_95: 1
+Distance from Patient_37
+Patient_54: 1
+Patient_93: 2
+Patient_83: 1
+Patient_88: 1
+Patient_70: 1
+Patient_92: 1
+Patient_87: 1
+Patient_74: 1
+Patient_20: 1
+Patient_62: 2
+Patient_97: 1
+Patient_84: 1
+Patient_51: 2
+Patient_24: 2
+Patient_61: 1
+Patient_90: 2
+Patient_25: 1
+Patient_49: 1
+Patient_37: 0
+Patient_5: 1
+Patient_7: 1
+Patient_79: 1
+Patient_47: 1
+Patient_50: 2
+Patient_1: 2
+Patient_40: 2
+Patient_10: 2
+Patient_56: 1
+Patient_55: 1
+Patient_31: 1
+Patient_75: 1
+Patient_22: 2
+Distance from Patient_44
+Patient_27: 1
+Patient_13: 3
+Patient_43: 1
+Patient_94: 2
+Patient_96: 3
+Patient_98: 2
+Patient_57: 1
+Patient_60: 1
+Patient_72: 1
+Patient_52: 2
+Patient_80: 2
+Patient_59: 2
+Patient_14: 3
+Patient_99: 2
+Patient_69: 1
+Patient_44: 0
+Patient_81: 2
+Patient_30: 2
+Patient_26: 3
+Patient_3: 1
+Patient_76: 1
+Patient_63: 3
+Patient_91: 1
+Patient_64: 1
+Patient_89: 3
+Patient_0: 2
+Patient_65: 1
+Patient_38: 3
+Patient_95: 1
+Distance from Patient_61
+Patient_20: 2
+Patient_47: 2
+Patient_83: 2
+Patient_37: 1
+Patient_93: 1
+Patient_56: 2
+Patient_74: 1
+Patient_88: 1
+Patient_10: 3
+Patient_51: 1
+Patient_7: 2
+Patient_24: 2
+Patient_79: 1
+Patient_49: 1
+Patient_90: 1
+Patient_1: 2
+Patient_97: 2
+Patient_5: 2
+Patient_92: 2
+Patient_54: 2
+Patient_84: 1
+Patient_40: 3
+Patient_25: 2
+Patient_50: 3
+Patient_55: 2
+Patient_62: 1
+Patient_31: 2
+Patient_22: 1
+Patient_61: 0
+Patient_87: 1
+Patient_70: 2
+Patient_75: 1
+Distance from Patient_65
+Patient_57: 1
+Patient_0: 2
+Patient_98: 1
+Patient_26: 2
+Patient_13: 2
+Patient_63: 2
+Patient_95: 1
+Patient_99: 1
+Patient_38: 2
+Patient_76: 1
+Patient_60: 1
+Patient_91: 1
+Patient_44: 1
+Patient_89: 2
+Patient_72: 1
+Patient_3: 2
+Patient_64: 1
+Patient_69: 1
+Patient_94: 1
+Patient_43: 1
+Patient_27: 2
+Patient_30: 1
+Patient_65: 0
+Patient_81: 1
+Patient_80: 1
+Patient_52: 1
+Patient_59: 1
+Patient_14: 2
+Patient_96: 2
+Distance from Patient_95
+Patient_94: 2
+Patient_98: 2
+Patient_69: 1
+Patient_3: 1
+Patient_52: 2
+Patient_65: 1
+Patient_95: 0
+Patient_0: 2
+Patient_57: 1
+Patient_96: 3
+Patient_13: 3
+Patient_60: 1
+Patient_63: 3
+Patient_59: 2
+Patient_30: 2
+Patient_80: 2
+Patient_72: 1
+Patient_99: 2
+Patient_44: 1
+Patient_91: 1
+Patient_38: 3
+Patient_43: 1
+Patient_14: 3
+Patient_81: 2
+Patient_64: 1
+Patient_26: 3
+Patient_27: 1
+Patient_89: 3
+Patient_76: 1
+Distance from Patient_96
+Patient_3: 4
+Patient_76: 3
+Patient_13: 1
+Patient_99: 2
+Patient_27: 4
+Patient_69: 3
+Patient_14: 1
+Patient_0: 3
+Patient_94: 2
+Patient_81: 1
+Patient_30: 2
+Patient_44: 3
+Patient_38: 1
+Patient_59: 2
+Patient_26: 2
+Patient_52: 2
+Patient_91: 3
+Patient_57: 3
+Patient_95: 3
+Patient_60: 2
+Patient_64: 3
+Patient_80: 3
+Patient_63: 2
+Patient_89: 3
+Patient_43: 3
+Patient_72: 3
+Patient_65: 2
+Patient_98: 3
+Patient_96: 0
+Distance from Patient_5
+Patient_49: 2
+Patient_74: 2
+Patient_20: 1
+Patient_90: 3
+Patient_93: 2
+Patient_47: 1
+Patient_5: 0
+Patient_55: 1
+Patient_79: 1
+Patient_61: 2
+Patient_62: 3
+Patient_37: 1
+Patient_40: 2
+Patient_1: 1
+Patient_97: 1
+Patient_51: 2
+Patient_87: 2
+Patient_88: 2
+Patient_22: 3
+Patient_24: 1
+Patient_25: 1
+Patient_70: 1
+Patient_10: 1
+Patient_92: 1
+Patient_54: 1
+Patient_75: 1
+Patient_31: 1
+Patient_84: 2
+Patient_56: 1
+Patient_83: 1
+Patient_7: 2
+Patient_50: 1
+Distance from Patient_21
+Patient_4: 1
+Patient_21: 0
+Patient_39: 1
+Distance from Patient_24
+Patient_24: 0
+Patient_20: 1
+Patient_22: 3
+Patient_79: 2
+Patient_54: 1
+Patient_49: 2
+Patient_7: 1
+Patient_93: 2
+Patient_37: 2
+Patient_97: 1
+Patient_25: 1
+Patient_92: 1
+Patient_74: 2
+Patient_31: 1
+Patient_75: 1
+Patient_84: 2
+Patient_88: 2
+Patient_70: 1
+Patient_56: 1
+Patient_55: 1
+Patient_51: 2
+Patient_40: 1
+Patient_90: 3
+Patient_62: 3
+Patient_83: 2
+Patient_50: 1
+Patient_10: 1
+Patient_47: 1
+Patient_87: 2
+Patient_61: 2
+Patient_5: 1
+Patient_1: 1
+Distance from Patient_34
+Patient_9: 1
+Patient_23: 2
+Patient_42: 2
+Patient_58: 1
+Patient_46: 1
+Patient_41: 1
+Patient_18: 1
+Patient_77: 3
+Patient_15: 1
+Patient_48: 2
+Patient_12: 2
+Patient_67: 3
+Patient_35: 2
+Patient_34: 0
+Patient_85: 2
+Patient_28: 1
+Patient_29: 1
+Patient_32: 2
+Patient_6: 2
+Patient_16: 2
+Distance from Patient_49
+Patient_56: 2
+Patient_84: 1
+Patient_74: 1
+Patient_87: 1
+Patient_92: 2
+Patient_70: 2
+Patient_61: 1
+Patient_5: 2
+Patient_88: 1
+Patient_7: 2
+Patient_50: 3
+Patient_54: 2
+Patient_49: 0
+Patient_1: 2
+Patient_47: 2
+Patient_24: 2
+Patient_10: 3
+Patient_79: 1
+Patient_55: 2
+Patient_90: 1
+Patient_51: 1
+Patient_20: 2
+Patient_83: 1
+Patient_31: 2
+Patient_75: 1
+Patient_97: 2
+Patient_37: 1
+Patient_93: 1
+Patient_25: 2
+Patient_22: 1
+Patient_40: 3
+Patient_62: 1
+Distance from Patient_74
+Patient_74: 0
+Patient_25: 2
+Patient_83: 2
+Patient_97: 2
+Patient_31: 2
+Patient_70: 2
+Patient_93: 1
+Patient_20: 2
+Patient_90: 1
+Patient_61: 1
+Patient_7: 1
+Patient_10: 2
+Patient_50: 2
+Patient_37: 1
+Patient_22: 1
+Patient_47: 1
+Patient_87: 1
+Patient_54: 2
+Patient_75: 1
+Patient_55: 2
+Patient_62: 1
+Patient_56: 2
+Patient_1: 2
+Patient_5: 2
+Patient_24: 2
+Patient_84: 1
+Patient_51: 1
+Patient_92: 2
+Patient_49: 1
+Patient_88: 1
+Patient_79: 1
+Patient_40: 2
+Distance from Patient_87
+Patient_7: 2
+Patient_22: 1
+Patient_37: 1
+Patient_61: 1
+Patient_62: 1
+Patient_97: 2
+Patient_54: 2
+Patient_1: 2
+Patient_75: 1
+Patient_93: 1
+Patient_84: 1
+Patient_10: 3
+Patient_92: 2
+Patient_56: 2
+Patient_83: 1
+Patient_50: 3
+Patient_55: 2
+Patient_79: 1
+Patient_74: 1
+Patient_90: 1
+Patient_5: 2
+Patient_87: 0
+Patient_20: 2
+Patient_49: 1
+Patient_47: 2
+Patient_40: 3
+Patient_70: 2
+Patient_25: 2
+Patient_24: 2
+Patient_31: 2
+Patient_88: 1
+Patient_51: 1
+Distance from Patient_12
+Patient_28: 1
+Patient_42: 1
+Patient_16: 1
+Patient_85: 1
+Patient_67: 1
+Patient_15: 2
+Patient_35: 1
+Patient_46: 1
+Patient_23: 1
+Patient_34: 2
+Patient_18: 2
+Patient_29: 1
+Patient_9: 1
+Patient_32: 1
+Patient_58: 1
+Patient_6: 1
+Patient_41: 1
+Patient_77: 1
+Patient_48: 1
+Patient_12: 0
+Distance from Patient_29
+Patient_67: 2
+Patient_77: 2
+Patient_58: 1
+Patient_12: 1
+Patient_32: 1
+Patient_6: 1
+Patient_29: 0
+Patient_9: 1
+Patient_18: 1
+Patient_35: 2
+Patient_42: 1
+Patient_85: 2
+Patient_15: 1
+Patient_16: 2
+Patient_41: 1
+Patient_46: 1
+Patient_28: 1
+Patient_34: 1
+Patient_48: 1
+Patient_23: 1
+Distance from Patient_31
+Patient_20: 1
+Patient_75: 1
+Patient_51: 2
+Patient_93: 2
+Patient_50: 2
+Patient_24: 1
+Patient_47: 2
+Patient_70: 1
+Patient_74: 2
+Patient_97: 1
+Patient_25: 1
+Patient_79: 1
+Patient_7: 2
+Patient_84: 2
+Patient_90: 3
+Patient_92: 1
+Patient_54: 1
+Patient_10: 2
+Patient_87: 2
+Patient_5: 1
+Patient_55: 1
+Patient_37: 1
+Patient_56: 1
+Patient_83: 2
+Patient_88: 2
+Patient_22: 3
+Patient_49: 2
+Patient_1: 1
+Patient_40: 2
+Patient_31: 0
+Patient_61: 2
+Patient_62: 3
+Distance from Patient_45
+Patient_33: 1
+Patient_8: 1
+Patient_68: 1
+Patient_45: 0
+Patient_2: 1
+Patient_19: 1
+Patient_36: 1
+Patient_11: 1
+Patient_86: 1
+Patient_82: 1
+Patient_78: 1
+Patient_73: 1
+Distance from Patient_88
+Patient_7: 1
+Patient_50: 2
+Patient_92: 2
+Patient_1: 2
+Patient_24: 2
+Patient_74: 1
+Patient_49: 1
+Patient_90: 1
+Patient_37: 1
+Patient_62: 1
+Patient_87: 1
+Patient_75: 1
+Patient_79: 1
+Patient_93: 1
+Patient_5: 2
+Patient_40: 2
+Patient_22: 1
+Patient_97: 2
+Patient_83: 2
+Patient_84: 1
+Patient_61: 1
+Patient_31: 2
+Patient_51: 1
+Patient_47: 1
+Patient_25: 2
+Patient_70: 2
+Patient_10: 2
+Patient_54: 2
+Patient_88: 0
+Patient_55: 2
+Patient_56: 2
+Patient_20: 2
+Distance from Patient_85
+Patient_35: 1
+Patient_58: 2
+Patient_29: 2
+Patient_48: 1
+Patient_34: 2
+Patient_23: 2
+Patient_41: 2
+Patient_32: 1
+Patient_12: 1
+Patient_85: 0
+Patient_9: 2
+Patient_6: 1
+Patient_28: 1
+Patient_77: 1
+Patient_46: 2
+Patient_67: 1
+Patient_15: 3
+Patient_16: 1
+Patient_42: 1
+Patient_18: 2
+Component 1: 29 nodes
+Component 2: 3 nodes
+Component 3: 12 nodes
+Component 4: 1 nodes
+Component 5: 32 nodes
+Component 6: 3 nodes
+Component 7: 20 nodes
+7 components found
+Patient: Patient_3, Angina Count: 2, Total Neighbors: 10, Angina Ratio: 0.20
+Patient_3 is likely to have exercise-induced angina.
+Patient: Patient_5, Angina Count: 16, Total Neighbors: 36, Angina Ratio: 0.44
+Patient_5 is likely to have exercise-induced angina.
+Patient: Patient_7, Angina Count: 18, Total Neighbors: 26, Angina Ratio: 0.69
+Patient_7 is likely to have exercise-induced angina.
+Patient: Patient_9, Angina Count: 8, Total Neighbors: 20, Angina Ratio: 0.40
+Patient_9 is likely to have exercise-induced angina.
+Patient: Patient_10, Angina Count: 18, Total Neighbors: 20, Angina Ratio: 0.90
+Patient_10 is likely to have exercise-induced angina.
+Patient: Patient_12, Angina Count: 14, Total Neighbors: 32, Angina Ratio: 0.44
+Patient_12 is likely to have exercise-induced angina.
+Patient: Patient_13, Angina Count: 4, Total Neighbors: 8, Angina Ratio: 0.50
+Patient_13 is likely to have exercise-induced angina.
+Patient: Patient_16, Angina Count: 8, Total Neighbors: 22, Angina Ratio: 0.36
+Patient_16 is likely to have exercise-induced angina.
+Patient_17 has no neighbors to make a prediction.
+Patient: Patient_18, Angina Count: 8, Total Neighbors: 16, Angina Ratio: 0.50
+Patient_18 is likely to have exercise-induced angina.
+Patient: Patient_19, Angina Count: 10, Total Neighbors: 18, Angina Ratio: 0.56
+Patient_19 is likely to have exercise-induced angina.
+Patient: Patient_20, Angina Count: 14, Total Neighbors: 28, Angina Ratio: 0.50
+Patient_20 is likely to have exercise-induced angina.
+Patient: Patient_22, Angina Count: 2, Total Neighbors: 16, Angina Ratio: 0.12
+Patient_22 is unlikely to have exercise-induced angina.
+Patient: Patient_24, Angina Count: 20, Total Neighbors: 34, Angina Ratio: 0.59
+Patient_24 is likely to have exercise-induced angina.
+Patient: Patient_29, Angina Count: 12, Total Neighbors: 28, Angina Ratio: 0.43
+Patient_29 is likely to have exercise-induced angina.
+Patient: Patient_30, Angina Count: 10, Total Neighbors: 38, Angina Ratio: 0.26
+Patient_30 is likely to have exercise-induced angina.
+Patient: Patient_33, Angina Count: 4, Total Neighbors: 6, Angina Ratio: 0.67
+Patient_33 is likely to have exercise-induced angina.
+Patient: Patient_34, Angina Count: 8, Total Neighbors: 16, Angina Ratio: 0.50
+Patient_34 is likely to have exercise-induced angina.
+Patient: Patient_35, Angina Count: 8, Total Neighbors: 20, Angina Ratio: 0.40
+Patient_35 is likely to have exercise-induced angina.
+Patient: Patient_36, Angina Count: 8, Total Neighbors: 18, Angina Ratio: 0.44
+Patient_36 is likely to have exercise-induced angina.
+Patient: Patient_37, Angina Count: 18, Total Neighbors: 42, Angina Ratio: 0.43
+Patient_37 is likely to have exercise-induced angina.
+Patient: Patient_40, Angina Count: 16, Total Neighbors: 18, Angina Ratio: 0.89
+Patient_40 is likely to have exercise-induced angina.
+Patient: Patient_42, Angina Count: 12, Total Neighbors: 28, Angina Ratio: 0.43
+Patient_42 is likely to have exercise-induced angina.
+Patient: Patient_43, Angina Count: 4, Total Neighbors: 32, Angina Ratio: 0.12
+Patient_43 is unlikely to have exercise-induced angina.
+Patient: Patient_46, Angina Count: 12, Total Neighbors: 22, Angina Ratio: 0.55
+Patient_46 is likely to have exercise-induced angina.
+Patient: Patient_47, Angina Count: 22, Total Neighbors: 34, Angina Ratio: 0.65
+Patient_47 is likely to have exercise-induced angina.
+Patient: Patient_49, Angina Count: 8, Total Neighbors: 28, Angina Ratio: 0.29
+Patient_49 is likely to have exercise-induced angina.
+Patient: Patient_54, Angina Count: 14, Total Neighbors: 32, Angina Ratio: 0.44
+Patient_54 is likely to have exercise-induced angina.
+Patient: Patient_59, Angina Count: 8, Total Neighbors: 34, Angina Ratio: 0.24
+Patient_59 is likely to have exercise-induced angina.
+Patient: Patient_67, Angina Count: 8, Total Neighbors: 16, Angina Ratio: 0.50
+Patient_67 is likely to have exercise-induced angina.
+Patient: Patient_68, Angina Count: 10, Total Neighbors: 20, Angina Ratio: 0.50
+Patient_68 is likely to have exercise-induced angina.
+Patient: Patient_69, Angina Count: 4, Total Neighbors: 18, Angina Ratio: 0.22
+Patient_69 is likely to have exercise-induced angina.
+Patient: Patient_72, Angina Count: 4, Total Neighbors: 24, Angina Ratio: 0.17
+Patient_72 is unlikely to have exercise-induced angina.
+Patient: Patient_74, Angina Count: 12, Total Neighbors: 30, Angina Ratio: 0.40
+Patient_74 is likely to have exercise-induced angina.
+Patient: Patient_78, Angina Count: 8, Total Neighbors: 20, Angina Ratio: 0.40
+Patient_78 is likely to have exercise-induced angina.
+Patient: Patient_79, Angina Count: 18, Total Neighbors: 44, Angina Ratio: 0.41
+Patient_79 is likely to have exercise-induced angina.
+Patient: Patient_83, Angina Count: 8, Total Neighbors: 26, Angina Ratio: 0.31
+Patient_83 is likely to have exercise-induced angina.
+Patient: Patient_86, Angina Count: 10, Total Neighbors: 20, Angina Ratio: 0.50
+Patient_86 is likely to have exercise-induced angina.
+Patient: Patient_87, Angina Count: 8, Total Neighbors: 28, Angina Ratio: 0.29
+Patient_87 is likely to have exercise-induced angina.
