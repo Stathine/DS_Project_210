@@ -5,7 +5,7 @@ pub type Matrix = Vec<Vec<bool>>;
 
 pub struct Graph {
     n: usize,
-    nodes: HashMap<String, (f64, f64, f64, bool)>, 
+    nodes: HashMap<String, (f64, f64, f64, f64, f64, f64, bool)>, // Ensure tuple matches throughout the program
     adj_map: Edges,
     adj_matrix: Matrix,
 }
@@ -13,7 +13,7 @@ pub struct Graph {
 impl Graph {
     pub fn new(
         n: usize,
-        nodes: HashMap<String, (f64, f64, f64, bool)>,
+        nodes: HashMap<String, (f64, f64, f64, f64, f64, f64, bool)>,
         adj_map: Edges,
         adj_matrix: Matrix,
     ) -> Self {
@@ -26,6 +26,15 @@ impl Graph {
     }
 
     pub fn undirected(&mut self) -> &Graph {
+        let mut temp_adj_map = self.adj_map.clone(); // Clone adj_map to avoid double borrowing
+        for (node, neighbors) in temp_adj_map.iter() {
+            for neighbor in neighbors {
+                self.adj_map
+                    .entry(neighbor.clone())
+                    .or_insert_with(Vec::new)
+                    .push(node.clone());
+            }
+        }
         self
     }
 
@@ -42,18 +51,50 @@ impl Graph {
             let angina_neighbors = neighbors
                 .iter()
                 .filter(|&neighbor| {
-                    self.nodes.get(neighbor).map_or(false, |(_, _, _, angina)| *angina)
+                    self.nodes
+                        .get(neighbor)
+                        .map_or(false, |(_, _, _, _, _, _, angina)| *angina)
                 })
                 .count();
 
             let angina_rate = angina_neighbors as f64 / total_neighbors as f64;
 
-            if angina_rate >= 0.7 {
+            if angina_rate >= 0.5 {
                 positive.push(node.clone());
             }
         }
 
         positive
+    }
+
+    pub fn calculate_accuracy(&self, positive_patients: Vec<String>) -> f64 {
+        let mut true_positive = 0;
+        let mut false_positive = 0;
+        let mut true_negative = 0;
+        let mut false_negative = 0;
+
+        for (patient, (_, _, _, _, _, _, exang)) in &self.nodes {
+            let is_positive = positive_patients.contains(patient);
+            let actual_positive = *exang; // `exang` is a boolean field
+
+            if is_positive && actual_positive {
+                true_positive += 1;
+            } else if is_positive && !actual_positive {
+                false_positive += 1;
+            } else if !is_positive && !actual_positive {
+                true_negative += 1;
+            } else if !is_positive && actual_positive {
+                false_negative += 1;
+            }
+        }
+
+        let total = true_positive + false_positive + true_negative + false_negative;
+
+        if total == 0 {
+            return 0.0; // Handle edge case with no data
+        }
+
+        (true_positive + true_negative) as f64 / total as f64
     }
 
     pub fn portfolio(&self) {
@@ -92,31 +133,26 @@ impl Graph {
         }
     }
 
-    // new 
     pub fn analyze_neighborhoods(&self) {
         for (node, neighbors) in self.adj_map.iter() {
             println!("Node: {}, Immediate Neighbors: {:?}", node, neighbors);
         }
     }
 
-    //new 
     pub fn edge_density(&self) -> f64 {
         let n = self.n;
         if n < 2 {
             return 0.0; // No edges possible for fewer than 2 nodes
         }
 
-        // Count actual edges (undirected, so count each edge only once)
         let edge_count: usize = self.adj_map.values().map(|neighbors| neighbors.len()).sum();
         let actual_edges = edge_count / 2; // Each edge is counted twice in adj_map
 
-        // Maximum possible edges in an undirected graph
         let max_edges = n * (n - 1) / 2;
 
         actual_edges as f64 / max_edges as f64
     }
 
-    // new 
     pub fn average_path_length(&self) -> Option<f64> {
         let mut total_distance = 0;
         let mut pair_count = 0;
@@ -163,17 +199,15 @@ impl Graph {
         distances
     }
 
-    // new 
     pub fn clustering_coefficient(&self) -> f64 {
         let mut total_coefficient = 0.0;
 
         for (node, neighbors) in self.adj_map.iter() {
             let neighbor_count = neighbors.len();
             if neighbor_count < 2 {
-                continue; // No possible connections between neighbors
+                continue;
             }
 
-            // Count connections between neighbors
             let mut connections = 0;
             for i in 0..neighbor_count {
                 for j in (i + 1)..neighbor_count {
@@ -238,25 +272,23 @@ impl Graph {
             .filter(|neighbor| {
                 self.nodes
                     .get(*neighbor)
-                    .map_or(false, |(_, _, _, angina)| *angina)
+                    .map_or(false, |(_, _, _, _, _, _, angina)| *angina)
             })
             .count();
-    
+
         let total_neighbors = neighbors.len();
-    
+
         if total_neighbors == 0 {
             return None;
         }
-    
+
         let angina_ratio = angina_count as f64 / total_neighbors as f64;
-    
-        // Debugging: Print details
+
         println!(
-            "Patient: {}, Neighbors: {:?}, Angina Count: {}, Total Neighbors: {}, Angina Ratio: {:.2}",
-            patient, neighbors, angina_count, total_neighbors, angina_ratio
+            "Patient: {}, Angina Count: {}, Total Neighbors: {}, Angina Ratio: {:.2}",
+            patient, angina_count, total_neighbors, angina_ratio
         );
-    
-        Some(angina_ratio > 0.4)
+
+        Some(angina_ratio >= 0.2)
     }
-    
 }
