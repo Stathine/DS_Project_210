@@ -1,57 +1,91 @@
-use std::{error::Error, collections::HashMap};
-use create::{PatientRecord, parse_bool, HealthGraph, PatientNode};
-
-mod adjacent;
 mod create;
+mod adjacent;
 
-pub type PatientNodes = Vec<PatientNode>;
-pub type GraphEdges = HashMap<String, Vec<String>>;
-pub type AdjacencyMatrix = Vec<Vec<bool>>;
+use create::Graph;
+use adjacent::{createadj, recommend};
+use std::{collections::HashMap, error::Error};
+use std::fs::File;
 
-fn read_csv(path: &str) -> Result<PatientNodes, Box<dyn Error>> {
-    let mut rdr = csv::Reader::from_path(path)?;
-    let mut nodes: PatientNodes = Vec::new();
+pub type Nodes = Vec<(String, (f64, f64, f64, bool))>;
 
-    for result in rdr.deserialize() {
-        let record: PatientRecord = result?;
-        let node = PatientNode {
-            description: format!(
-                "BMI: {:.1}, Smoking: {:?}, Stroke: {:?}, Alcohol Drinking: {:?}, Difficulty Walking: {:?}",
-                record.bmi.unwrap_or(0.0),
-                record.smoking.unwrap_or(false),
-                record.stroke.unwrap_or(false),
-                record.alcohol_drinking.unwrap_or(false),
-                record.diff_walking.unwrap_or(false)
-            ),
-            bmi: record.bmi.unwrap_or(0.0),
-            smoking: record.smoking.unwrap_or(false),
-            stroke: record.stroke.unwrap_or(false),
-        };
-        nodes.push(node);
+fn read(path: &str) -> Result<Nodes, Box<dyn Error>> {
+    let file = File::open(path)?;
+    let mut rdr = csv::Reader::from_reader(file);
+    let mut nodes: Nodes = Vec::new();
+
+    for (index, record) in rdr.records().enumerate() {
+        let record = record?;
+        let id = format!("Patient_{}", index);
+
+        let heart_rate: f64 = record.get(7).unwrap_or("0").parse()?; // Adjust index for dataset column
+        let chest_pain: f64 = record.get(2).unwrap_or("0").parse()?;
+        let cholesterol: f64 = record.get(4).unwrap_or("0").parse()?;
+        let angina: bool = record.get(10).unwrap_or("0").parse::<i32>()? == 1;
+
+        nodes.push((id, (heart_rate, chest_pain, cholesterol, angina)));
     }
 
     Ok(nodes)
 }
 
 fn main() {
-    let dataset_path = "heart_2020_reduced_100.csv";
-    let patient_nodes = read_csv(dataset_path).expect("Couldn't read the dataset!");
-    let similarity_weights = (1.0, 0.5, 0.3); // Weights: BMI, Smoking, Stroke
-    let similarity_threshold = 5.0; // Similarity threshold
+    let path = "heart_reduced_with_ptID.csv";
+    let nodes = read(path).expect("Couldn't read the dataset!");
+    let n = nodes.len();
 
-    let (edges, adjacency_matrix) =
-        adjacent::build_adjacency(patient_nodes.clone(), similarity_threshold, similarity_weights);
+    let threshold = 0.34; // Adjust as needed
+    let (adj_map, adj_matrix) = createadj(nodes.clone(), threshold, n);
 
-    let mut health_graph =
-        HealthGraph::new(patient_nodes.len(), patient_nodes.clone(), edges.clone(), adjacency_matrix.clone());
-    let health_graph = health_graph.convert_to_undirected();
+    // Convert nodes to a HashMap for easy lookup
+    let node_map: HashMap<String, (f64, f64, f64, bool)> = nodes
+        .into_iter()
+        .map(|(id, attributes)| (id, attributes))
+        .collect();
 
-    let (positive_cases, negative_cases) = health_graph.filter_by_threshold(25.0);
+    let mut graph = Graph::new(n, node_map, adj_map, adj_matrix);
+    graph.undirected();
 
-    println!("Positive cases: {:?}", positive_cases);
-    println!("Negative cases: {:?}", negative_cases);
 
-    health_graph.print_risk_assessment();
-    health_graph.print_clusters();
-    health_graph.find_k_best_representatives(3); // Find top 3 representatives in each cluster
+    // Perform other graph-based operations
+    let mut positive = graph.dailyexpect(); // Get the list of positive patients
+    positive.sort_by_key(|id| id.trim_start_matches("Patient_").parse::<usize>().unwrap());
+    println!("Positive patients based on neighbor angina rate: {:?}", positive);
+    graph.analyze_neighborhoods();
+    graph.portfolio();
+    graph.groups();
+
+    // Predict angina for a specific patient
+    //let patient_id = "Patient_42".to_string(); // Example patient
+    //match graph.predict_angina(&patient_id) {
+        //Some(true) => println!(" {} is likely to have exercise-induced angina.", patient_id),
+        //Some(false) => println!(" {} is unlikely to have exercise-induced angina.", patient_id),
+        //None => println!(" {} has no neighbors to make a prediction.", patient_id),
+    //}
+
+    let patients = vec![
+    3, 5, 7, 9, 10, 12, 13, 16, 17, 18, 19, 20, 22, 24, 29, 30, 33, 34, 35, 36, 37, 40, 42, 43, 46,
+    47, 49, 54, 59, 67, 68, 69, 72, 74, 78, 79, 83, 86, 87,
+    ];
+
+    for patient_number in patients {
+        let patient_id = format!("Patient_{}", patient_number); // Format each patient ID
+        match graph.predict_angina(&patient_id) {
+            Some(true) => println!("{} is likely to have exercise-induced angina.", patient_id),
+            Some(false) => println!("{} is unlikely to have exercise-induced angina.", patient_id),
+            None => println!("{} has no neighbors to make a prediction.", patient_id),
+        }
+    }
+
+    let density = graph.edge_density();
+    println!("Edge Density: {:.2}", density);
+
+    if let Some(avg_length) = graph.average_path_length() {
+        println!("Average Path Length: {:.2}", avg_length);
+    } else {
+        println!("Graph has no paths.");
+    }
+
+    let clustering = graph.clustering_coefficient();
+    println!("Clustering Coefficient: {:.2}", clustering);
+
 }

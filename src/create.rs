@@ -1,191 +1,262 @@
-use serde::Deserialize;
 use std::collections::{HashMap, VecDeque};
 
-#[derive(Debug, Deserialize)]
-pub struct PatientRecord {
-    #[serde(rename = "BMI")]
-    pub bmi: Option<f64>,
-    #[serde(rename = "Smoking", deserialize_with = "parse_bool")]
-    pub smoking: Option<bool>,
-    #[serde(rename = "Stroke", deserialize_with = "parse_bool")]
-    pub stroke: Option<bool>,
-    #[serde(rename = "AlcoholDrinking", deserialize_with = "parse_bool")]
-    pub alcohol_drinking: Option<bool>,
-    #[serde(rename = "DiffWalking", deserialize_with = "parse_bool")]
-    pub diff_walking: Option<bool>,
+pub type Edges = HashMap<String, Vec<String>>;
+pub type Matrix = Vec<Vec<bool>>;
+
+pub struct Graph {
+    n: usize,
+    nodes: HashMap<String, (f64, f64, f64, bool)>, 
+    adj_map: Edges,
+    adj_matrix: Matrix,
 }
 
-pub fn parse_bool<'de, D>(deserializer: D) -> Result<Option<bool>, D::Error>
-where
-    D: serde::Deserializer<'de>,
-{
-    let value: String = Deserialize::deserialize(deserializer)?;
-    match value.to_lowercase().as_str() {
-        "true" | "1" | "yes" => Ok(Some(true)),
-        "false" | "0" | "no" => Ok(Some(false)),
-        _ => Ok(None),
-    }
-}
-
-#[derive(Debug, Clone)]
-pub struct PatientNode {
-    pub description: String,
-    pub bmi: f64,
-    pub smoking: bool,
-    pub stroke: bool,
-}
-
-pub type PatientNodes = Vec<PatientNode>;
-pub type GraphEdges = HashMap<String, Vec<String>>;
-pub type AdjacencyMatrix = Vec<Vec<bool>>;
-
-#[derive(Debug)]
-pub struct HealthGraph {
-    num_nodes: usize,
-    nodes: PatientNodes,
-    edges: GraphEdges,
-    adjacency_matrix: AdjacencyMatrix,
-}
-
-impl HealthGraph {
+impl Graph {
     pub fn new(
-        num_nodes: usize,
-        nodes: PatientNodes,
-        edges: GraphEdges,
-        adjacency_matrix: AdjacencyMatrix,
+        n: usize,
+        nodes: HashMap<String, (f64, f64, f64, bool)>,
+        adj_map: Edges,
+        adj_matrix: Matrix,
     ) -> Self {
-        HealthGraph {
-            num_nodes,
+        Graph {
+            n,
             nodes,
-            edges,
-            adjacency_matrix,
+            adj_map,
+            adj_matrix,
         }
     }
 
-    pub fn convert_to_undirected(&mut self) -> &HealthGraph {
-        self.nodes.sort_by(|a, b| a.description.cmp(&b.description));
+    pub fn undirected(&mut self) -> &Graph {
         self
     }
 
-    pub fn filter_by_threshold(&self, threshold: f64) -> (Vec<PatientNode>, Vec<PatientNode>) {
-        let (above_threshold, below_threshold): (Vec<_>, Vec<_>) = self
+    pub fn dailyexpect(&self) -> Vec<String> {
+        let mut positive = Vec::new();
+
+        for (node, neighbors) in self.adj_map.iter() {
+            let total_neighbors = neighbors.len();
+
+            if total_neighbors == 0 {
+                continue; // Skip patients with no neighbors
+            }
+
+            let angina_neighbors = neighbors
+                .iter()
+                .filter(|&neighbor| {
+                    self.nodes.get(neighbor).map_or(false, |(_, _, _, angina)| *angina)
+                })
+                .count();
+
+            let angina_rate = angina_neighbors as f64 / total_neighbors as f64;
+
+            if angina_rate >= 0.7 {
+                positive.push(node.clone());
+            }
+        }
+
+        positive
+    }
+
+    pub fn portfolio(&self) {
+        for node in self.nodes.keys() {
+            println!("Distance from {}", node);
+            self.risk(node);
+        }
+    }
+
+    pub fn risk(&self, node: &String) {
+        let mut distances: HashMap<String, Option<u32>> = self
             .nodes
-            .clone()
-            .into_iter()
-            .partition(|node| node.bmi >= threshold);
-        (above_threshold, below_threshold)
-    }
+            .keys()
+            .map(|k| (k.clone(), None))
+            .collect();
+        distances.insert(node.clone(), Some(0));
 
-    pub fn print_risk_assessment(&self) {
-        for i in 0..self.num_nodes {
-            println!("Risk assessment for: {}", self.nodes[i].description);
-            self.compute_risk(i);
-        }
-    }
-
-    pub fn compute_risk(&self, index: usize) {
-        let mut distances: Vec<Option<u32>> = vec![None; self.num_nodes];
-        distances[index] = Some(0);
-        let mut queue: VecDeque<usize> = VecDeque::new();
-        queue.push_back(index);
-
-        while let Some(node_index) = queue.pop_front() {
-            for (neighbor_index, &connected) in self.adjacency_matrix[node_index].iter().enumerate() {
-                if connected && distances[neighbor_index].is_none() {
-                    distances[neighbor_index] = Some(distances[node_index].unwrap() + 1);
-                    queue.push_back(neighbor_index);
-                }
-            }
-        }
-
-        for node_index in 0..self.num_nodes {
-            println!(
-                "Distance to {}: {:?}",
-                self.nodes[node_index].description, distances[node_index]
-            );
-        }
-    }
-
-    pub fn print_clusters(&self) {
-        let mut cluster_ids: Vec<Option<usize>> = vec![None; self.num_nodes];
-        let mut cluster_count = 0;
-        let mut cluster_health_data: HashMap<usize, (usize, usize)> = HashMap::new();
-
-        for node_index in 0..self.num_nodes {
-            if cluster_ids[node_index].is_none() {
-                cluster_count += 1;
-                self.assign_cluster(node_index, &mut cluster_ids, cluster_count);
-            }
-        }
-
-        println!("Total clusters: {}", cluster_count);
-        for (node_index, cluster_id) in cluster_ids.iter().enumerate() {
-            println!("Node {} belongs to cluster {:?}", self.nodes[node_index].description, cluster_id);
-
-            if let Some(id) = cluster_id {
-                let entry = cluster_health_data.entry(*id).or_insert((0, 0));
-                if self.nodes[node_index].smoking {
-                    entry.0 += 1; // Increment smoker count
-                }
-                entry.1 += 1; // Increment total node count
-            }
-        }
-
-        for (cluster_id, (smokers, total)) in cluster_health_data.iter() {
-            println!(
-                "Cluster {}: {:.2}% smokers",
-                cluster_id,
-                (*smokers as f64 / *total as f64) * 100.0
-            );
-        }
-    }
-
-    pub fn find_k_best_representatives(&self, k: usize) {
-        let mut cluster_ids: Vec<Option<usize>> = vec![None; self.num_nodes];
-        let mut cluster_count = 0;
-        let mut cluster_representatives: HashMap<usize, Vec<(String, usize)>> = HashMap::new();
-
-        for node_index in 0..self.num_nodes {
-            if cluster_ids[node_index].is_none() {
-                cluster_count += 1;
-                self.assign_cluster(node_index, &mut cluster_ids, cluster_count);
-            }
-        }
-
-        for (node_index, cluster_id) in cluster_ids.iter().enumerate() {
-            if let Some(id) = cluster_id {
-                let degree = self.adjacency_matrix[node_index]
-                    .iter()
-                    .filter(|&&connected| connected)
-                    .count();
-                cluster_representatives
-                    .entry(*id)
-                    .or_insert_with(Vec::new)
-                    .push((self.nodes[node_index].description.clone(), degree));
-            }
-        }
-
-        for (cluster_id, mut representatives) in cluster_representatives.iter_mut() {
-            representatives.sort_by(|a, b| b.1.cmp(&a.1));
-            println!("Cluster {} representatives:", cluster_id);
-            for rep in representatives.iter().take(k) {
-                println!("  Node: {}, Degree: {}", rep.0, rep.1);
-            }
-        }
-    }
-
-    fn assign_cluster(&self, node_index: usize, cluster_ids: &mut Vec<Option<usize>>, cluster_id: usize) {
-        cluster_ids[node_index] = Some(cluster_id);
         let mut queue = VecDeque::new();
-        queue.push_back(node_index);
+        queue.push_back(node.clone());
 
-        while let Some(current_index) = queue.pop_front() {
-            for (neighbor_index, &connected) in self.adjacency_matrix[current_index].iter().enumerate() {
-                if connected && cluster_ids[neighbor_index].is_none() {
-                    cluster_ids[neighbor_index] = Some(cluster_id);
-                    queue.push_back(neighbor_index);
+        while let Some(v) = queue.pop_front() {
+            if let Some(neighbors) = self.adj_map.get(&v) {
+                for neighbor in neighbors {
+                    if distances[neighbor].is_none() {
+                        distances.insert(neighbor.clone(), Some(distances[&v].unwrap() + 1));
+                        queue.push_back(neighbor.clone());
+                    }
                 }
             }
         }
+
+        for (neighbor, distance) in distances.iter() {
+            if let Some(d) = distance {
+                println!("{}: {}", neighbor, d);
+            }
+        }
     }
+
+    // new 
+    pub fn analyze_neighborhoods(&self) {
+        for (node, neighbors) in self.adj_map.iter() {
+            println!("Node: {}, Immediate Neighbors: {:?}", node, neighbors);
+        }
+    }
+
+    //new 
+    pub fn edge_density(&self) -> f64 {
+        let n = self.n;
+        if n < 2 {
+            return 0.0; // No edges possible for fewer than 2 nodes
+        }
+
+        // Count actual edges (undirected, so count each edge only once)
+        let edge_count: usize = self.adj_map.values().map(|neighbors| neighbors.len()).sum();
+        let actual_edges = edge_count / 2; // Each edge is counted twice in adj_map
+
+        // Maximum possible edges in an undirected graph
+        let max_edges = n * (n - 1) / 2;
+
+        actual_edges as f64 / max_edges as f64
+    }
+
+    // new 
+    pub fn average_path_length(&self) -> Option<f64> {
+        let mut total_distance = 0;
+        let mut pair_count = 0;
+
+        for node in self.nodes.keys() {
+            let distances = self.shortest_paths(node);
+            for distance in distances.values() {
+                if let Some(d) = distance {
+                    total_distance += *d as usize;
+                    pair_count += 1;
+                }
+            }
+        }
+
+        if pair_count == 0 {
+            return None; // No paths in the graph
+        }
+
+        Some(total_distance as f64 / pair_count as f64)
+    }
+
+    fn shortest_paths(&self, start: &String) -> HashMap<String, Option<u32>> {
+        let mut distances: HashMap<String, Option<u32>> = self
+            .nodes
+            .keys()
+            .map(|node| (node.clone(), None))
+            .collect();
+        distances.insert(start.clone(), Some(0));
+
+        let mut queue = VecDeque::new();
+        queue.push_back(start.clone());
+
+        while let Some(current) = queue.pop_front() {
+            if let Some(neighbors) = self.adj_map.get(&current) {
+                for neighbor in neighbors {
+                    if distances[neighbor].is_none() {
+                        distances.insert(neighbor.clone(), Some(distances[&current].unwrap() + 1));
+                        queue.push_back(neighbor.clone());
+                    }
+                }
+            }
+        }
+
+        distances
+    }
+
+    // new 
+    pub fn clustering_coefficient(&self) -> f64 {
+        let mut total_coefficient = 0.0;
+
+        for (node, neighbors) in self.adj_map.iter() {
+            let neighbor_count = neighbors.len();
+            if neighbor_count < 2 {
+                continue; // No possible connections between neighbors
+            }
+
+            // Count connections between neighbors
+            let mut connections = 0;
+            for i in 0..neighbor_count {
+                for j in (i + 1)..neighbor_count {
+                    if self.adj_map.get(&neighbors[i]).unwrap_or(&vec![]).contains(&neighbors[j]) {
+                        connections += 1;
+                    }
+                }
+            }
+
+            let max_connections = neighbor_count * (neighbor_count - 1) / 2;
+            total_coefficient += connections as f64 / max_connections as f64;
+        }
+
+        total_coefficient / self.n as f64
+    }
+
+    pub fn groups(&self) {
+        let mut visited = HashMap::new();
+        let mut count = 0;
+
+        for node in self.nodes.keys() {
+            if visited.get(node).is_none() {
+                count += 1;
+                let size = self.find_components(node, &mut visited, count);
+                println!("Component {}: {} nodes", count, size);
+            }
+        }
+
+        println!("{} components found", count);
+    }
+
+    fn find_components(
+        &self,
+        node: &String,
+        visited: &mut HashMap<String, usize>,
+        count: usize,
+    ) -> usize {
+        let mut queue = VecDeque::new();
+        let mut size = 0;
+        queue.push_back(node.clone());
+
+        while let Some(v) = queue.pop_front() {
+            if visited.insert(v.clone(), count).is_none() {
+                size += 1;
+                if let Some(neighbors) = self.adj_map.get(&v) {
+                    for neighbor in neighbors {
+                        if visited.get(neighbor).is_none() {
+                            queue.push_back(neighbor.clone());
+                        }
+                    }
+                }
+            }
+        }
+
+        size
+    }
+
+    pub fn predict_angina(&self, patient: &String) -> Option<bool> {
+        let neighbors = self.adj_map.get(patient)?;
+        let angina_count = neighbors
+            .iter()
+            .filter(|neighbor| {
+                self.nodes
+                    .get(*neighbor)
+                    .map_or(false, |(_, _, _, angina)| *angina)
+            })
+            .count();
+    
+        let total_neighbors = neighbors.len();
+    
+        if total_neighbors == 0 {
+            return None;
+        }
+    
+        let angina_ratio = angina_count as f64 / total_neighbors as f64;
+    
+        // Debugging: Print details
+        println!(
+            "Patient: {}, Neighbors: {:?}, Angina Count: {}, Total Neighbors: {}, Angina Ratio: {:.2}",
+            patient, neighbors, angina_count, total_neighbors, angina_ratio
+        );
+    
+        Some(angina_ratio > 0.4)
+    }
+    
 }

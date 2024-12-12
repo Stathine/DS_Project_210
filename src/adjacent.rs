@@ -1,51 +1,52 @@
 use std::collections::HashMap;
-use crate::PatientNode;
 
-pub type PatientNodes = Vec<PatientNode>;
-pub type GraphEdges = HashMap<String, Vec<String>>;
-pub type AdjacencyMatrix = Vec<Vec<bool>>;
+pub type Nodes = Vec<(String, (f64, f64, f64, bool))>;
+pub type Edges = HashMap<String, Vec<String>>;
+pub type Matrix = Vec<Vec<bool>>;
 
-pub fn build_adjacency(
-    nodes: PatientNodes,
-    threshold: f64,
-    weights: (f64, f64, f64), // (BMI weight, Smoking weight, Stroke weight)
-) -> (GraphEdges, AdjacencyMatrix) {
-    let num_nodes = nodes.len();
+pub fn createadj(nodes: Nodes, threshold: f64, n: usize) -> (Edges, Matrix) {
     let mut edges = HashMap::new();
-    let mut matrix: AdjacencyMatrix = vec![vec![false; num_nodes]; num_nodes];
+    let mut matrix: Vec<Vec<bool>> = vec![vec![false; n]; n];
 
-    for i in 0..num_nodes {
-        for j in 0..num_nodes {
+    let max_heart_rate = nodes.iter().map(|(_, (hr, _, _, _))| *hr).fold(0.0, f64::max);
+    let max_chest_pain = nodes.iter().map(|(_, (_, cp, _, _))| *cp).fold(0.0, f64::max);
+    let max_cholesterol = nodes.iter().map(|(_, (_, _, chol, _))| *chol).fold(0.0, f64::max);
+
+    for (i, (id1, (hr1, cp1, chol1, _))) in nodes.iter().enumerate() {
+        for (j, (id2, (hr2, cp2, chol2, _))) in nodes.iter().enumerate() {
             if i == j {
                 matrix[i][j] = true;
                 continue;
             }
 
-            let node_i = &nodes[i];
-            let node_j = &nodes[j];
+            let hr_normalized = (hr1 - hr2).abs() / max_heart_rate;
+            let cp_normalized = (cp1 - cp2).abs() / max_chest_pain;
+            let chol_normalized = (chol1 - chol2).abs() / max_cholesterol;
 
-            let bmi_diff = (node_i.bmi - node_j.bmi).abs() * weights.0;
-            let smoking_sim = if node_i.smoking == node_j.smoking {
-                weights.1
-            } else {
-                0.0
-            };
-            let stroke_sim = if node_i.stroke == node_j.stroke {
-                weights.2
-            } else {
-                0.0
-            };
+            let distance = (hr_normalized.powi(2) + cp_normalized.powi(2) + chol_normalized.powi(2)).sqrt();
 
-            let similarity_score = bmi_diff - smoking_sim - stroke_sim;
-
-            if similarity_score <= threshold {
-                edges
-                    .entry(node_i.description.clone())
+            if distance <= threshold {
+                edges.entry(id1.clone())
                     .or_insert_with(Vec::new)
-                    .push(node_j.description.clone());
+                    .push(id2.clone());
                 matrix[i][j] = true;
             }
         }
     }
     (edges, matrix)
+}
+
+pub fn recommend(edges: Edges, nodes: &HashMap<String, (f64, f64, f64, bool)>) -> HashMap<String, bool> {
+    let mut recommendations = HashMap::new();
+
+    for (node, neighbors) in edges.iter() {
+        let angina_neighbors = neighbors.iter()
+            .filter(|neighbor| nodes.get(*neighbor).map_or(false, |(_, _, _, angina)| *angina))
+            .count();
+
+        let angina_ratio = angina_neighbors as f64 / neighbors.len() as f64;
+        recommendations.insert(node.clone(), angina_ratio > 0.5);
+    }
+
+    recommendations
 }
