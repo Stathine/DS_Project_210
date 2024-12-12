@@ -43,7 +43,7 @@ fn main() {
     let nodes = read(path).expect("Couldn't read the dataset!");
     let n = nodes.len();
 
-    let threshold = 0.45; // Adjust as needed
+    let threshold = 0.45; // Adjust as needxed
     let (adj_map, adj_matrix) = createadj(nodes.clone(), threshold, n);
 
     // Convert nodes to a HashMap for easy lookup
