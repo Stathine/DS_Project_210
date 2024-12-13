@@ -43,19 +43,7 @@ pub fn createadj(nodes: Nodes, threshold: f64, n: usize) -> (Edges, Matrix) {
     (edges, matrix)
 }
 
-pub fn recommend(edges: Edges, nodes: &HashMap<String, (f64, f64, f64, f64, f64, f64, bool)>) -> HashMap<String, bool> {
-    let mut recommendations = HashMap::new();
-    for (node, neighbors) in edges.iter() {
-        let angina_neighbors = neighbors
-            .iter()
-            .filter(|neighbor| nodes.get(*neighbor).map_or(false, |(_, _, _, _, _, _, angina)| *angina))
-            .count();
 
-        let angina_ratio = angina_neighbors as f64 / neighbors.len() as f64;
-        recommendations.insert(node.clone(), angina_ratio > 0.5);
-    }
-    recommendations
-}
 
 
 

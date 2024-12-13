@@ -205,7 +205,6 @@ impl Graph {
                 println!("Component {}: {} nodes", count, size);
             }
         }
-        println!("{} components found", count);
     }
 
     fn find_components(
