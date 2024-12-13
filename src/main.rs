@@ -1,4 +1,4 @@
-mod create;
+mod graph;
 mod adjacent;
 
 use create::Graph;
