@@ -80,18 +80,18 @@ mod tests {
 
     #[test]
     fn test_read_function() {
-        let test_path = "test_heart_reduced_with_ptID.csv"; // Ensure this path is correct
+        let test_path = "test_heart_reduced_with_ptID.csv"; 
         let nodes = read(test_path).expect("Failed to read test dataset.");
         assert!(
             !nodes.is_empty(),
             "The dataset should not be empty after reading."
         );
-        assert_eq!(nodes.len(), 100, "Expected 100 patients in the test dataset."); // Adjust as per your test dataset
+        assert_eq!(nodes.len(), 100, "Expected 100 patients in the test dataset."); 
     }
 
     #[test]
     fn test_graph_initialization() {
-        let test_path = "test_heart_reduced_with_ptID.csv"; // Ensure this path is correct
+        let test_path = "test_heart_reduced_with_ptID.csv"; 
         let nodes = read(test_path).expect("Failed to read test dataset.");
         let n = nodes.len();
         let (adj_map, adj_matrix) = createadj(nodes.clone(), 0.45, n);
