@@ -4,7 +4,7 @@ pub type Edges = HashMap<String, Vec<String>>;
 pub type Matrix = Vec<Vec<bool>>;
 
 pub struct Graph {
-    n: usize,
+    pub n: usize,
     nodes: HashMap<String, (f64, f64, f64, f64, f64, f64, bool)>, 
     adj_map: Edges,
     adj_matrix: Matrix,

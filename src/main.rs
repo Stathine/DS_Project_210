@@ -33,7 +33,7 @@ pub fn read(path: &str) -> Result<Nodes, Box<dyn Error>> {
 }
 
 fn main() {
-    let path = "heart_reduced_with_ptID.csv";
+    let path = "heart_with_ptID.csv";
     let nodes = read(path).expect("Couldn't read the dataset!");
     let n = nodes.len();
     let threshold = 0.45; 
