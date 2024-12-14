@@ -4,6 +4,7 @@ pub type Nodes = Vec<(String, (f64, f64, f64, f64, f64, f64, bool))>;
 pub type Edges = HashMap<String, Vec<String>>;
 pub type Matrix = Vec<Vec<bool>>;
 
+// generates the adjacency list and adjacency matrix 
 pub fn createadj(nodes: Nodes, threshold: f64, n: usize) -> (Edges, Matrix) {
     let mut edges = HashMap::new();
     let mut matrix: Vec<Vec<bool>> = vec![vec![false; n]; n];
@@ -25,6 +26,7 @@ pub fn createadj(nodes: Nodes, threshold: f64, n: usize) -> (Edges, Matrix) {
             let oldpeak_normalized = (oldpeak1 - oldpeak2).abs() / max_oldpeak;
             let ca_normalized = (ca1 - ca2).abs() / max_ca;
             let target_normalized = (target1 - target2).abs() / max_target;
+            // a euclidean distance formula
             let distance = (hr_normalized.powi(2)
                 + cp_normalized.powi(2)
                 + chol_normalized.powi(2)

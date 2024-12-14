@@ -12,6 +12,7 @@ pub struct Graph {
 
 impl Graph {
     
+    // initializes a new Graph 
     pub fn new(
         n: usize,
         nodes: HashMap<String, (f64, f64, f64, f64, f64, f64, bool)>,
@@ -26,6 +27,7 @@ impl Graph {
         }
     }
 
+    // converts a directed graph into an undirected one 
     pub fn undirected(&mut self) -> &Graph {
         let mut temp_adj_map = self.adj_map.clone();
         for (node, neighbors) in temp_adj_map.iter() {
@@ -39,8 +41,9 @@ impl Graph {
         self
     }
 
+    // identifies high-risk patients
     pub fn high_risk_pts(&self) -> Vec<String> {
-        let mut positive = Vec::new();
+        let mut high_risk = Vec::new();
         for (node, neighbors) in self.adj_map.iter() {
             let total_neighbors = neighbors.len();
             if total_neighbors == 0 {
@@ -56,12 +59,13 @@ impl Graph {
                 .count();
             let angina_rate = angina_neighbors as f64 / total_neighbors as f64;
             if angina_rate >= 0.5 {
-                positive.push(node.clone());
+                high_risk.push(node.clone());
             }
         }
-        positive
+        high_risk
     }
 
+    // predicts whether a given patient is likely to have angina
     pub fn predict_angina(&self, patient: &String) -> Option<bool> {
         let neighbors = self.adj_map.get(patient)?;
         let angina_count = neighbors
@@ -84,6 +88,7 @@ impl Graph {
         Some(angina_ratio >= 0.2)
     }
 
+    // computes the distances
     pub fn distances(&self) {
         for node in self.nodes.keys() {
             println!("Distance from {}", node);
@@ -91,6 +96,7 @@ impl Graph {
         }
     }
 
+    // computes the shortest distances
     pub fn node_distance(&self, node: &String) {
         let mut distances: HashMap<String, Option<u32>> = self
             .nodes
@@ -117,12 +123,14 @@ impl Graph {
         }
     }
 
+    // prints each node and its immediate neighbors
     pub fn analyze_neighborhoods(&self) {
         for (node, neighbors) in self.adj_map.iter() {
             println!("Node: {}, Immediate Neighbors: {:?}", node, neighbors);
         }
     }
 
+    // calculates the graph's edge density
     pub fn edge_density(&self) -> f64 {
         let n = self.n;
         if n < 2 {
@@ -134,6 +142,7 @@ impl Graph {
         actual_edges as f64 / max_edges as f64
     }
 
+    // calculates the average shortest path length
     pub fn average_path_length(&self) -> Option<f64> {
         let mut total_distance = 0;
         let mut pair_count = 0;
@@ -152,6 +161,7 @@ impl Graph {
         Some(total_distance as f64 / pair_count as f64)
     }
 
+    // computes the shortest paths
     fn shortest_paths(&self, start: &String) -> HashMap<String, Option<u32>> {
         let mut distances: HashMap<String, Option<u32>> = self
             .nodes
@@ -174,6 +184,7 @@ impl Graph {
         distances
     }
 
+    // calculates the clustering coefficient
     pub fn clustering_coefficient(&self) -> f64 {
         let mut total_coefficient = 0.0;
         for (node, neighbors) in self.adj_map.iter() {
@@ -195,6 +206,7 @@ impl Graph {
         total_coefficient / self.n as f64
     }
 
+    // identifies and prints all connected components
     pub fn components(&self) {
         let mut visited = HashMap::new();
         let mut count = 0;
@@ -207,6 +219,7 @@ impl Graph {
         }
     }
 
+    // finds all nodes in a connected component
     fn find_components(
         &self,
         node: &String,

@@ -1,13 +1,14 @@
 mod graph;
 mod adjacent;
 
-use create::Graph;
+use graph::Graph;
 use adjacent::{createadj};
 use std::{collections::HashMap, error::Error};
 use std::fs::File;
 
 pub type Nodes = Vec<(String, (f64, f64, f64, f64, f64, f64, bool))>;
 
+// reads the csv file
 pub fn read(path: &str) -> Result<Nodes, Box<dyn Error>> {
     let file = File::open(path)?;
     let mut rdr = csv::Reader::from_reader(file);
@@ -44,6 +45,7 @@ fn main() {
         .collect();
     
     let mut graph = Graph::new(n, node_map, adj_map, adj_matrix);
+
     graph.undirected();
     graph.analyze_neighborhoods();
     graph.distances();
@@ -65,14 +67,16 @@ fn main() {
     let clustering = graph.clustering_coefficient();
     println!("Clustering Coefficient: {:.2}", clustering);
 
-    let patient_id = "Patient_20".to_string(); 
+    let patient_id = "Patient_56".to_string(); 
     match graph.predict_angina(&patient_id) {
-        Some(true) => println!("{} is likely to have exercise-induced angina.", patient_id),
-        Some(false) => println!("{} is unlikely to have exercise-induced angina.", patient_id),
+        Some(true) => println!("{} is likely to have exercise induced angina.", patient_id),
+        Some(false) => println!("{} is unlikely to have exercise induced angina.", patient_id),
         None => println!("{} has no neighbors to make a prediction.", patient_id),
     }
 
 }
+
+// tests 
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -138,13 +142,13 @@ mod tests {
             .collect();
 
         let graph = Graph::new(n, node_map, adj_map, adj_matrix);
-        let patient_id = "Patient_1".to_string();
+        let patient_id = "Patient_7".to_string();
         match graph.predict_angina(&patient_id) {
             Some(prediction) => assert!(
                 prediction == true || prediction == false,
                 "Prediction should return a boolean value."
             ),
-            None => assert!(true, "No prediction available for Patient_1."),
+            None => assert!(true, "No prediction available for Patient_7."),
         }
     }
 }
